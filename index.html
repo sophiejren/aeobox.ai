@@ -3719,6 +3719,10 @@ document.getElementById('contactModal').addEventListener('click', function(e){
     return (s || '').trim().replace(/^https?:\/\//i, '').replace(/\/$/, '').toLowerCase();
   }
 
+  // Plan B: call Render audit service DIRECTLY (skip Netlify Function middle layer).
+  // Netlify Forms still gets the submission for record-keeping (fire-and-forget backup).
+  var AUDIT_SERVICE_URL = 'https://aeobox-audit.onrender.com';
+
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
     errorBox.style.display = 'none';
@@ -3729,22 +3733,41 @@ document.getElementById('contactModal').addEventListener('click', function(e){
     var data = new FormData(form);
     var domain = cleanDomain(data.get('domain'));
     var email = (data.get('email') || '').trim();
-    data.set('domain', domain);
 
-    // Post to Netlify Forms (server-side processing → triggers form-submission-created function)
+    // Fire-and-forget backup: post to Netlify Forms so Sophie has a record
     try {
       var body = new URLSearchParams();
       data.forEach(function(v, k) { body.append(k, v); });
-
-      var resp = await fetch('/', {
+      body.set('domain', domain);
+      fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: body.toString()
+      }).catch(function() { /* silent — primary path is Render below */ });
+    } catch (_) { /* never block primary path */ }
+
+    // PRIMARY: call Render directly — this is the path that triggers the email
+    try {
+      var resp = await fetch(AUDIT_SERVICE_URL + '/audit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          domain: domain,
+          email: email,
+          name: '',
+          company: '',
+          source: 'audit',
+          goals: [],
+          context: ''
+        })
       });
 
-      if (!resp.ok) throw new Error('netlify form returned ' + resp.status);
+      if (!resp.ok) {
+        var errText = await resp.text();
+        throw new Error('audit-service returned ' + resp.status + ': ' + errText);
+      }
 
-      // Success: hide form + features, show success card
+      // Success: hide form, show success card
       domainEcho.textContent = domain || 'your site';
       emailEcho.textContent = email || 'your inbox';
       form.style.display = 'none';
