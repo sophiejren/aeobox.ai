@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AEObox MARK · mono white — for dark photos, photo overlays, partnership lockups -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-label="AEObox">
+  <title>AEObox</title>
+  <path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="#FFFFFF"/>
+  <path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="#FFFFFF"/>
+  <path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#FFFFFF"/>
+  <g fill="#FFFFFF">
+    <path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/>
+    <path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/>
+    <path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/>
+    <path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/>
+  </g>
+</svg>
