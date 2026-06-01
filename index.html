@@ -2879,6 +2879,7 @@ input, textarea { font-family: inherit; }
           <h2 class="section-title" style="font-size: clamp(28px, 3.5vw, 44px); margin-top: 18px;">Where does your brand show up when 1,000 shoppers ask AI?</h2>
           <p class="section-sub">Drop your domain. We'll fire 1,000 real shopper prompts at ChatGPT, Google AI Overview, Claude &amp; Gemini — and email you the breakdown of where you appeared (and where your competitors stole the answer).</p>
           <form
+            id="auditForm"
             class="audit-form"
             name="audit-request"
             method="POST"
@@ -2889,12 +2890,26 @@ input, textarea { font-family: inherit; }
             <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
             <input type="text" name="domain" placeholder="yourbrand.com" id="auditUrl" required />
             <input type="email" name="email" placeholder="you@brand.com" required />
-            <button type="submit" class="btn btn-gradient">Run my AI audit <span class="arrow">→</span></button>
+            <button type="submit" id="auditBtn" class="btn btn-gradient">Run my AI audit <span class="arrow">→</span></button>
           </form>
-          <div class="audit-features">
+          <div class="audit-features" id="auditFeatures">
             <span><span class="check">✓</span> 1,000 real prompts tested</span>
             <span><span class="check">✓</span> 5 AI engines benchmarked</span>
             <span><span class="check">✓</span> Competitor share-of-voice</span>
+          </div>
+          <!-- Success state (shown after successful submit) -->
+          <div id="auditSuccess" style="display:none; margin-top:18px; padding:22px 24px; border:1px solid rgba(124,92,255,0.45); border-radius:14px; background:linear-gradient(135deg, rgba(124,92,255,0.10), rgba(0,212,255,0.07));">
+            <div style="font-size:30px; line-height:1; margin-bottom:10px;">📧</div>
+            <strong style="display:block; font-size:18px; margin-bottom:8px; color:var(--text);">Got it — your audit is running.</strong>
+            <p style="margin:0; color:var(--text-muted); font-size:14px; line-height:1.55;">
+              We're crawling <strong style="color:var(--text);" id="auditDomainEcho">your site</strong> right now and testing it against ~1,000 buyer prompts across ChatGPT, Google AI Overview, Claude &amp; Gemini.<br/>
+              <strong style="color:var(--text);">Your branded report will land at <span id="auditEmailEcho">your inbox</span> within 90 seconds.</strong> Check spam if it's slow — or reply to that email and Sophie will jump in.
+            </p>
+          </div>
+          <!-- Error state -->
+          <div id="auditError" style="display:none; margin-top:18px; padding:16px 20px; border:1px solid var(--danger); border-radius:14px; background:rgba(255,90,106,0.08);">
+            <strong style="color:var(--danger); display:block; margin-bottom:6px;">Hmm — that didn't go through.</strong>
+            <p style="margin:0; color:var(--text-muted); font-size:14px;">Mind retrying? Or email Sophie directly at <a href="mailto:sophie@aeobox.ai" style="color:var(--accent-2);">sophie@aeobox.ai</a> and we'll run it manually within an hour.</p>
           </div>
         </div>
         <div class="audit-preview" id="auditPreview">
@@ -3669,6 +3684,66 @@ document.addEventListener('keydown', function(e){
 document.getElementById('contactModal').addEventListener('click', function(e){
   if (e.target === this) closeContactModal();
 });
+</script>
+
+<!-- ====================== HERO AUDIT FORM — submit handler ====================== -->
+<script>
+(function(){
+  var form = document.getElementById('auditForm');
+  if (!form) return;
+  var btn = document.getElementById('auditBtn');
+  var features = document.getElementById('auditFeatures');
+  var success = document.getElementById('auditSuccess');
+  var errorBox = document.getElementById('auditError');
+  var domainEcho = document.getElementById('auditDomainEcho');
+  var emailEcho = document.getElementById('auditEmailEcho');
+
+  // Normalize domain: strip http(s):// and trailing slashes
+  function cleanDomain(s) {
+    return (s || '').trim().replace(/^https?:\/\//i, '').replace(/\/$/, '').toLowerCase();
+  }
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    errorBox.style.display = 'none';
+    btn.disabled = true;
+    var originalBtnHtml = btn.innerHTML;
+    btn.innerHTML = 'Submitting<span class="arrow" style="margin-left:6px;">…</span>';
+
+    var data = new FormData(form);
+    var domain = cleanDomain(data.get('domain'));
+    var email = (data.get('email') || '').trim();
+    data.set('domain', domain);
+
+    // Post to Netlify Forms (server-side processing → triggers form-submission-created function)
+    try {
+      var body = new URLSearchParams();
+      data.forEach(function(v, k) { body.append(k, v); });
+
+      var resp = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString()
+      });
+
+      if (!resp.ok) throw new Error('netlify form returned ' + resp.status);
+
+      // Success: hide form + features, show success card
+      domainEcho.textContent = domain || 'your site';
+      emailEcho.textContent = email || 'your inbox';
+      form.style.display = 'none';
+      if (features) features.style.display = 'none';
+      success.style.display = 'block';
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (err) {
+      console.error('[audit-form] submit failed:', err);
+      btn.disabled = false;
+      btn.innerHTML = originalBtnHtml;
+      errorBox.style.display = 'block';
+      errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+})();
 </script>
 
 </body>
