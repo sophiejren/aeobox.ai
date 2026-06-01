@@ -1,18 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" role="img" aria-label="AEObox">
+<!-- AEObox LOCKUP DARK · v5 SIGNATURE — mark + wordmark with brand DNA details -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 140" role="img" aria-label="AEObox">
   <title>AEObox</title>
   <defs>
-    <linearGradient id="lk" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#7C5CFF"/>
       <stop offset="100%" stop-color="#00D4FF"/>
     </linearGradient>
+    <linearGradient id="lq" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#7C5CFF"/>
+    </linearGradient>
   </defs>
-  <g transform="translate(4, 12) scale(0.62)">
-    <path d="M 22 16 L 12 16 L 12 74 L 22 74" fill="none" stroke="url(#lk)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M 98 16 L 108 16 L 108 74 L 98 74" fill="none" stroke="url(#lk)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M 35 70 L 60 22 L 85 70" fill="none" stroke="#F5F7FA" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M 53 50 Q 50 51 50 54 Q 50 57 53 58" fill="none" stroke="#00D4FF" stroke-width="3.8" stroke-linecap="round"/>
-    <path d="M 67 50 Q 70 51 70 54 Q 70 57 67 58" fill="none" stroke="#00D4FF" stroke-width="3.8" stroke-linecap="round"/>
+
+  <!-- ============ MARK [A] ============ -->
+  <g transform="translate(0, 0)">
+    <path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#lg)"/>
+    <path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#lg)"/>
+    <path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#F5F7FA"/>
+    <g fill="url(#lq)">
+      <path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/>
+      <path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/>
+      <path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/>
+      <path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/>
+    </g>
   </g>
-  <text x="92" y="54" fill="#F5F7FA" font-family="Inter, Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="40" font-weight="600" letter-spacing="-1.2">AEObox</text>
+
+  <!-- ============ WORDMARK · 3 signature details ============ -->
+  <g transform="translate(212, 32)">
+
+    <!-- A · SIGNATURE 1: paired-quote crossbar (echoes [A] mark) -->
+    <g fill="#F5F7FA">
+      <path d="M 0 76 L 30 0 L 36 0 L 19 38 L 14 76 Z"/>
+      <path d="M 36 0 L 42 0 L 72 76 L 58 76 L 53 38 Z"/>
+      <path d="M 19 38 L 53 38 L 51 46 L 21 46 Z"/>
+    </g>
+    <g fill="url(#lq)">
+      <path d="M 28 42 Q 25 42 25 46 Q 25 49 27 50 L 30 52 Q 30 50 28 49 Q 28 47 30 46 L 30 43 Q 30 42 28 42 Z"/>
+      <path d="M 44 52 Q 47 52 47 48 Q 47 45 45 44 L 42 42 Q 42 44 44 45 Q 44 47 42 48 L 42 51 Q 42 52 44 52 Z"/>
+    </g>
+
+    <!-- E · SIGNATURE 2: bracket-style terminals on top/bottom arms -->
+    <g fill="#F5F7FA">
+      <rect x="88" y="0" width="12" height="76"/>
+      <path d="M 88 0 L 138 0 L 138 12 L 138 14 L 134 14 L 134 12 L 100 12 L 100 0 Z"/>
+      <rect x="88" y="32" width="42" height="12"/>
+      <path d="M 88 64 L 100 64 L 100 76 L 138 76 L 138 64 L 138 62 L 134 62 L 134 64 Z"/>
+    </g>
+
+    <!-- O -->
+    <path d="M 190 0 C 168 0 153 17 153 38 C 153 59 168 76 190 76 C 212 76 227 59 227 38 C 227 17 212 0 190 0 Z M 190 12 C 204 12 213 23 213 38 C 213 53 204 64 190 64 C 176 64 167 53 167 38 C 167 23 176 12 190 12 Z" fill="#F5F7FA"/>
+
+    <!-- b · SIGNATURE 3: ascender slightly raised + bracket-foot -->
+    <g fill="#F5F7FA">
+      <rect x="240" y="-4" width="12" height="80"/>
+      <rect x="236" y="74" width="20" height="2"/>
+      <path d="M 252 28 C 256 24 262 22 270 22 C 285 22 296 35 296 50 C 296 65 285 78 270 78 C 262 78 256 76 252 72 L 252 60 C 255 65 260 67 268 67 C 277 67 284 59 284 50 C 284 41 277 33 268 33 C 260 33 255 35 252 40 Z"/>
+    </g>
+
+    <!-- o -->
+    <path d="M 332 22 C 317 22 306 35 306 50 C 306 65 317 78 332 78 C 347 78 358 65 358 50 C 358 35 347 22 332 22 Z M 332 33 C 341 33 346 41 346 50 C 346 59 341 67 332 67 C 323 67 318 59 318 50 C 318 41 323 33 332 33 Z" fill="#F5F7FA"/>
+
+    <!-- x · with tiny bracket terminals at 4 corners -->
+    <g fill="#F5F7FA">
+      <path d="M 362 24 L 376 24 L 388 41 L 400 24 L 414 24 L 395 49 L 416 76 L 402 76 L 388 58 L 374 76 L 360 76 L 381 49 Z"/>
+      <rect x="362" y="22" width="6" height="2"/>
+      <rect x="408" y="22" width="6" height="2"/>
+      <rect x="362" y="76" width="6" height="2"/>
+      <rect x="408" y="76" width="6" height="2"/>
+    </g>
+
+  </g>
 </svg>
