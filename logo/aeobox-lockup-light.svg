@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" role="img" aria-label="AEObox">
+  <title>AEObox</title>
+  <defs>
+    <linearGradient id="lkl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5B3DEB"/>
+      <stop offset="100%" stop-color="#00A8CC"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4, 12) scale(0.62)">
+    <path d="M 22 16 L 12 16 L 12 74 L 22 74" fill="none" stroke="url(#lkl)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 98 16 L 108 16 L 108 74 L 98 74" fill="none" stroke="url(#lkl)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 35 70 L 60 22 L 85 70" fill="none" stroke="#0B0D17" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 53 50 Q 50 51 50 54 Q 50 57 53 58" fill="none" stroke="#0FB5D9" stroke-width="3.8" stroke-linecap="round"/>
+    <path d="M 67 50 Q 70 51 70 54 Q 70 57 67 58" fill="none" stroke="#0FB5D9" stroke-width="3.8" stroke-linecap="round"/>
+  </g>
+  <text x="92" y="54" fill="#0B0D17" font-family="Inter, Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="40" font-weight="600" letter-spacing="-1.2">AEObox</text>
+</svg>

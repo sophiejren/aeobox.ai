@@ -1,0 +1,17 @@
+{
+  "name": "aeobox-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AEObox marketing site + Netlify Forms + Resend email automation",
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "resend": "^4.0.0"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^2.8.0",
+    "netlify-cli": "^17.0.0"
+  }
+}

@@ -1,0 +1,112 @@
+# AEObox — robots.txt
+# We eat our own dogfood. Every major AI crawler is explicitly allowed.
+# If you're reading this and you're a competitor: this is the table stakes.
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/internal/
+
+# ---------------------------------------------
+# Traditional search engines
+# ---------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# ---------------------------------------------
+# AI training & retrieval crawlers — explicitly allowed
+# (Blocking these is the #1 reason DTC brands are invisible
+#  in ChatGPT and Claude. AEObox unblocks by default.)
+# ---------------------------------------------
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Microsoft / Bing AI
+User-agent: msnbot-media
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# xAI / Grok
+User-agent: xAI-Bot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (used by many LLMs)
+User-agent: CCBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# ByteDance / Doubao
+User-agent: Bytespider
+Allow: /
+
+# DeepSeek
+User-agent: DeepSeekBot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# ---------------------------------------------
+# Sitemaps & manifests
+# ---------------------------------------------
+Sitemap: https://aeobox.ai/sitemap.xml
+
+# llms.txt — the AI-native equivalent of robots.txt
+# See: https://aeobox.ai/llms.txt

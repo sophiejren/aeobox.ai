@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" role="img" aria-label="AEObox">
+  <title>AEObox</title>
+  <defs>
+    <linearGradient id="fav" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C5CFF"/>
+      <stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+    <style>
+      .ink { stroke: #1B1E2E; }
+      @media (prefers-color-scheme: dark) { .ink { stroke: #FFFFFF; } }
+    </style>
+  </defs>
+  <path d="M 22 16 L 12 16 L 12 74 L 22 74" fill="none" stroke="url(#fav)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 98 16 L 108 16 L 108 74 L 98 74" fill="none" stroke="url(#fav)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="ink" d="M 35 70 L 60 22 L 85 70" fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

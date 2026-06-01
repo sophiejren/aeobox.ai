@@ -1,0 +1,12 @@
+{
+  "name": "AEObox",
+  "short_name": "AEObox",
+  "description": "The AI visibility OS for DTC brands.",
+  "icons": [
+    { "src": "favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#06070D",
+  "background_color": "#06070D",
+  "display": "standalone"
+}

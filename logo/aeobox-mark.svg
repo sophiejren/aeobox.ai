@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" role="img" aria-label="AEObox">
+  <title>AEObox</title>
+  <desc>The cited [A] — brackets framing an A whose crossbar is replaced by a paired opening and closing quotation mark.</desc>
+  <defs>
+    <linearGradient id="aeo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C5CFF"/>
+      <stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+  </defs>
+  <path d="M 22 16 L 12 16 L 12 74 L 22 74" fill="none" stroke="url(#aeo)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 98 16 L 108 16 L 108 74 L 98 74" fill="none" stroke="url(#aeo)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 35 70 L 60 22 L 85 70" fill="none" stroke="#F5F7FA" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 53 50 Q 50 51 50 54 Q 50 57 53 58" fill="none" stroke="#00D4FF" stroke-width="3.8" stroke-linecap="round"/>
+  <path d="M 67 50 Q 70 51 70 54 Q 70 57 67 58" fill="none" stroke="#00D4FF" stroke-width="3.8" stroke-linecap="round"/>
+</svg>
