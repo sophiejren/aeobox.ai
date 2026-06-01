@@ -2,11 +2,11 @@
 
 [build]
   publish = "."
+  command = "echo 'Static deploy — no build step needed'"
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["emails/**"]
 
 [[headers]]
   for = "/*"
