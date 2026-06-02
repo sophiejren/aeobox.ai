@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-label="AEObox">
+  <title>AEObox</title>
+  <desc>Citation brackets [A] — refined v2 with bold typographic terminals and prominent paired quotation marks replacing the A's crossbar.</desc>
+  <defs>
+    <linearGradient id="m2g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C5CFF"/>
+      <stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+    <linearGradient id="m2q" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#7C5CFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- LEFT BRACKET — typographic, solid, squared terminals -->
+  <path d="M 56 30 L 24 30 L 24 38 L 36 38 L 36 142 L 24 142 L 24 150 L 56 150 L 56 142 L 44 142 L 44 38 L 56 38 Z"
+        fill="url(#m2g)"/>
+
+  <!-- RIGHT BRACKET — mirrored -->
+  <path d="M 184 30 L 216 30 L 216 38 L 204 38 L 204 142 L 216 142 L 216 150 L 184 150 L 184 142 L 196 142 L 196 38 L 184 38 Z"
+        fill="url(#m2g)"/>
+
+  <!-- A — heavy stroke, classic geometry, slightly extended cap -->
+  <path d="M 120 36 L 80 148 L 96 148 L 105 122 L 135 122 L 144 148 L 160 148 Z M 110 108 L 130 108 L 120 80 Z"
+        fill="#F5F7FA"/>
+
+  <!-- OPENING QUOTE — chunky "66" form -->
+  <path d="M 100 80 Q 96 80 94 84 Q 92 88 92 94 L 92 102 L 102 102 L 102 92 L 98 92 Q 98 88 102 86 Z"
+        fill="url(#m2q)"/>
+
+  <!-- CLOSING QUOTE — chunky "99" form, mirrored -->
+  <path d="M 140 102 Q 144 102 146 98 Q 148 94 148 88 L 148 80 L 138 80 L 138 90 L 142 90 Q 142 94 138 96 Z"
+        fill="url(#m2q)"/>
+</svg>

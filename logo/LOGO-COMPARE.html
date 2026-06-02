@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AEObox · Logo Direction Comparison</title>
+<style>
+  :root{
+    --bg:#0B0E1A; --bg2:#11142A;
+    --text:#F5F7FA; --muted:#9CA3AF; --dim:#6B7280;
+    --line:rgba(255,255,255,0.08);
+    --accent:#7C5CFF; --accent2:#00D4FF;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif; background:var(--bg); color:var(--text); padding:48px 32px;}
+  h1{font-size:36px; font-weight:700; letter-spacing:-1px; margin:0 0 8px;}
+  h1 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+  .sub{color:var(--muted); margin:0 0 40px; font-size:16px;}
+  .row{display:grid; grid-template-columns:140px 1fr 1fr 1fr 1fr; gap:24px; align-items:center; padding:28px 24px; border-top:1px solid var(--line);}
+  .row.header{border-top:0; padding-bottom:8px;}
+  .row.header div{font-size:12px; color:var(--dim); letter-spacing:.1em; text-transform:uppercase; font-weight:600;}
+  .label{font-size:13px; color:var(--muted); font-weight:500;}
+  .cell{display:flex; align-items:center; justify-content:flex-start; min-height:60px;}
+  .cell-bg{background:var(--bg2); border-radius:12px; padding:20px; border:1px solid var(--line);}
+  .badge{display:inline-block; padding:3px 9px; border-radius:6px; font-size:10px; font-weight:600; letter-spacing:.05em;}
+  .badge.cur{background:rgba(156,163,175,0.18); color:var(--muted);}
+  .badge.v2{background:rgba(124,92,255,0.20); color:#A78BFA;}
+  .badge.v3{background:rgba(0,212,255,0.20); color:#22D3EE;}
+  .badge.v4{background:rgba(245,158,11,0.20); color:#FBBF24;}
+  .name{font-weight:700; font-size:15px; margin-bottom:4px;}
+  .desc{font-size:12px; color:var(--muted); line-height:1.4;}
+  .winner-card{margin-top:64px; padding:32px; background:linear-gradient(135deg, rgba(124,92,255,.08), rgba(0,212,255,.06)); border:1px solid rgba(124,92,255,0.4); border-radius:16px;}
+  .winner-card h2{margin:0 0 12px; font-size:22px;}
+  .winner-card p{margin:0 0 16px; color:var(--muted); line-height:1.65;}
+  .recos{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin-top:20px;}
+  .reco{padding:18px; border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,.02);}
+  .reco h3{margin:0 0 8px; font-size:14px;}
+  .reco p{margin:0; font-size:13px; color:var(--muted);}
+  .legend{margin-bottom:24px; padding:16px 20px; background:rgba(255,255,255,.02); border:1px solid var(--line); border-radius:10px; font-size:13px; color:var(--muted);}
+  .legend strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<h1><span class="grad">AEObox</span> · Logo Direction Comparison</h1>
+<p class="sub">4 directions @ real production sizes. Pick one — I'll precision-refine + replace the full asset pack (favicon / OG / nav / lockup).</p>
+
+<div class="legend">
+  <strong>Reading guide:</strong> Each row = one rendering size you'll see in real use.
+  Nav = 28px tall (top of site). Hero = 60px (centerpiece). Big = 100px (about page, brand assets).
+  All on the same dark background as the live site.
+</div>
+
+<div style="background:#08091A; border-radius:20px; padding:8px 28px;">
+
+  <div class="row header">
+    <div></div>
+    <div>V1 · Current (live)</div>
+    <div>V2 · Bold Editorial</div>
+    <div>V3 · Engineered Tech</div>
+    <div>V4 · Premium Minimalist</div>
+  </div>
+
+  <!-- META row -->
+  <div class="row" style="padding-top:16px; padding-bottom:24px;">
+    <div class="label">Direction</div>
+
+    <div class="cell" style="flex-direction:column; align-items:flex-start;">
+      <span class="badge cur">CURRENT</span>
+      <div class="name" style="margin-top:8px;">Original</div>
+      <div class="desc">Thin rounded brackets, tiny quote curls, Inter font. Friendly but low presence.</div>
+    </div>
+
+    <div class="cell" style="flex-direction:column; align-items:flex-start;">
+      <span class="badge v2">V2</span>
+      <div class="name" style="margin-top:8px;">Bold Editorial</div>
+      <div class="desc">Heavy typographic brackets w/ squared serif terminals. Big chunky "66/99" quotes. Custom-drawn wordmark, solid like newspaper headers.</div>
+    </div>
+
+    <div class="cell" style="flex-direction:column; align-items:flex-start;">
+      <span class="badge v3">V3</span>
+      <div class="name" style="margin-top:8px;">Engineered Tech</div>
+      <div class="desc">Geometric block brackets w/ exposed tabs. Vertical bar quotes (monospace " style). Reads as "engineered for AI."</div>
+    </div>
+
+    <div class="cell" style="flex-direction:column; align-items:flex-start;">
+      <span class="badge v4">V4</span>
+      <div class="name" style="margin-top:8px;">Premium Minimalist</div>
+      <div class="desc">Refined editorial brackets w/ inverted serifs. Oversized inverted-comma quotes. Wordmark with intentional optical balance. 4A-grade restraint.</div>
+    </div>
+  </div>
+
+  <!-- NAV size 28px -->
+  <div class="row">
+    <div class="label">Nav<br/><span style="font-size:11px; color:var(--dim);">28px tall</span></div>
+    <div class="cell"><img src="aeobox-lockup-dark.svg" style="height:28px; width:auto;" alt="V1"/></div>
+    <div class="cell"><img src="aeobox-lockup-v2-bold.svg" style="height:28px; width:auto;" alt="V2"/></div>
+    <div class="cell"><img src="aeobox-lockup-v3-tech.svg" style="height:28px; width:auto;" alt="V3"/></div>
+    <div class="cell"><img src="aeobox-lockup-v4-premium.svg" style="height:28px; width:auto;" alt="V4"/></div>
+  </div>
+
+  <!-- HERO size 60px -->
+  <div class="row">
+    <div class="label">Hero<br/><span style="font-size:11px; color:var(--dim);">60px tall</span></div>
+    <div class="cell"><img src="aeobox-lockup-dark.svg" style="height:60px; width:auto;" alt="V1"/></div>
+    <div class="cell"><img src="aeobox-lockup-v2-bold.svg" style="height:60px; width:auto;" alt="V2"/></div>
+    <div class="cell"><img src="aeobox-lockup-v3-tech.svg" style="height:60px; width:auto;" alt="V3"/></div>
+    <div class="cell"><img src="aeobox-lockup-v4-premium.svg" style="height:60px; width:auto;" alt="V4"/></div>
+  </div>
+
+  <!-- BIG size 90px -->
+  <div class="row">
+    <div class="label">Big<br/><span style="font-size:11px; color:var(--dim);">90px tall</span></div>
+    <div class="cell"><img src="aeobox-lockup-dark.svg" style="height:90px; width:auto;" alt="V1"/></div>
+    <div class="cell"><img src="aeobox-lockup-v2-bold.svg" style="height:90px; width:auto;" alt="V2"/></div>
+    <div class="cell"><img src="aeobox-lockup-v3-tech.svg" style="height:90px; width:auto;" alt="V3"/></div>
+    <div class="cell"><img src="aeobox-lockup-v4-premium.svg" style="height:90px; width:auto;" alt="V4"/></div>
+  </div>
+
+  <!-- MARK ONLY (favicon-like) -->
+  <div class="row">
+    <div class="label">Mark only<br/><span style="font-size:11px; color:var(--dim);">favicon 48px</span></div>
+    <div class="cell"><img src="aeobox-mark.svg" style="height:48px; width:auto;" alt="V1"/></div>
+    <div class="cell"><div style="height:48px; width:62px; display:flex; align-items:center;"><svg viewBox="0 0 180 140" style="height:48px;"><use href="#m2-extract"/></svg><!-- Use v2 mark inline below --></div></div>
+    <div class="cell"><div style="height:48px;"><svg viewBox="0 0 200 140" style="height:48px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs><rect x="22" y="22" width="14" height="96" fill="url(#m3)"/><rect x="22" y="22" width="32" height="10" fill="url(#m3)"/><rect x="22" y="108" width="32" height="10" fill="url(#m3)"/><rect x="164" y="22" width="14" height="96" fill="url(#m3)"/><rect x="146" y="22" width="32" height="10" fill="url(#m3)"/><rect x="146" y="108" width="32" height="10" fill="url(#m3)"/><path d="M 100 26 L 60 118 L 76 118 L 84 96 L 116 96 L 124 118 L 140 118 Z M 88 84 L 112 84 L 100 56 Z" fill="#F5F7FA"/><rect x="82" y="62" width="5" height="20" rx="1" fill="#00D4FF"/><rect x="91" y="62" width="5" height="20" rx="1" fill="#00D4FF"/><rect x="104" y="62" width="5" height="20" rx="1" fill="#7C5CFF"/><rect x="113" y="62" width="5" height="20" rx="1" fill="#7C5CFF"/></svg></div></div>
+    <div class="cell"><div style="height:48px;"><svg viewBox="0 0 200 140" style="height:48px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient><linearGradient id="m4q" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs><path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#m4)"/><path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#m4)"/><path d="M 100 28 L 64 116 L 78 116 L 86 96 L 114 96 L 122 116 L 136 116 Z M 91 84 L 109 84 L 100 60 Z" fill="#F5F7FA"/><g fill="url(#m4q)"><path d="M 80 58 Q 73 58 73 67 Q 73 72 76 75 L 81 80 L 87 75 Q 90 71 90 65 Q 90 58 84 58 Z"/><path d="M 80 76 L 79 84 L 81 84 L 85 76 Z"/><path d="M 120 84 Q 127 84 127 75 Q 127 70 124 67 L 119 62 L 113 67 Q 110 71 110 77 Q 110 84 116 84 Z"/><path d="M 120 66 L 121 58 L 119 58 L 115 66 Z"/></g></svg></div></div>
+  </div>
+
+  <!-- V2 mark inline -->
+  <div class="row">
+    <div class="label">Mark<br/><span style="font-size:11px; color:var(--dim);">v2 large</span></div>
+    <div class="cell"><img src="aeobox-mark.svg" style="height:100px; width:auto;" alt="V1"/></div>
+    <div class="cell"><img src="aeobox-mark-v2.svg" style="height:100px; width:auto;" alt="V2"/></div>
+    <div class="cell"><div style="height:100px;"><svg viewBox="0 0 200 140" style="height:100px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m3b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs><rect x="22" y="22" width="14" height="96" fill="url(#m3b)"/><rect x="22" y="22" width="32" height="10" fill="url(#m3b)"/><rect x="22" y="108" width="32" height="10" fill="url(#m3b)"/><rect x="164" y="22" width="14" height="96" fill="url(#m3b)"/><rect x="146" y="22" width="32" height="10" fill="url(#m3b)"/><rect x="146" y="108" width="32" height="10" fill="url(#m3b)"/><path d="M 100 26 L 60 118 L 76 118 L 84 96 L 116 96 L 124 118 L 140 118 Z M 88 84 L 112 84 L 100 56 Z" fill="#F5F7FA"/><rect x="82" y="62" width="5" height="20" rx="1" fill="#00D4FF"/><rect x="91" y="62" width="5" height="20" rx="1" fill="#00D4FF"/><rect x="104" y="62" width="5" height="20" rx="1" fill="#7C5CFF"/><rect x="113" y="62" width="5" height="20" rx="1" fill="#7C5CFF"/></svg></div></div>
+    <div class="cell"><div style="height:100px;"><svg viewBox="0 0 200 140" style="height:100px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m4b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient><linearGradient id="m4qb" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs><path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#m4b)"/><path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#m4b)"/><path d="M 100 28 L 64 116 L 78 116 L 86 96 L 114 96 L 122 116 L 136 116 Z M 91 84 L 109 84 L 100 60 Z" fill="#F5F7FA"/><g fill="url(#m4qb)"><path d="M 80 58 Q 73 58 73 67 Q 73 72 76 75 L 81 80 L 87 75 Q 90 71 90 65 Q 90 58 84 58 Z"/><path d="M 80 76 L 79 84 L 81 84 L 85 76 Z"/><path d="M 120 84 Q 127 84 127 75 Q 127 70 124 67 L 119 62 L 113 67 Q 110 71 110 77 Q 110 84 116 84 Z"/><path d="M 120 66 L 121 58 L 119 58 L 115 66 Z"/></g></svg></div></div>
+  </div>
+
+</div>
+
+<div class="winner-card">
+  <h2>🎯 我的推荐:V2 · Bold Editorial</h2>
+  <p>三个新版本里,V2 最符合"4A 广告公司标准"的要求——典型典型版面括号 + 醒目可信的引号(像新闻头条的「」),custom-drawn wordmark 在小尺寸下也保持品牌识别度。它给 AEObox 一种 <strong>"被权威引用"</strong> 的视觉重量感,正好对应你们的 positioning(让 AI 引用你)。</p>
+
+  <div class="recos">
+    <div class="reco">
+      <h3>✅ 选 V2 如果...</h3>
+      <p>你想要最专业、最有"权威感"的品牌形象,适合面对 enterprise 客户和"被引用"这个核心概念。</p>
+    </div>
+    <div class="reco">
+      <h3>✅ 选 V3 如果...</h3>
+      <p>你想强调"engineered for AI"的技术感,目标客户偏 DTC / startup / 偏年轻和技术导向。</p>
+    </div>
+    <div class="reco">
+      <h3>✅ 选 V4 如果...</h3>
+      <p>你想要最克制、最"premium agency"的感觉,适合走 Concierge 高端路线、稀缺感、艺术总监审美。</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

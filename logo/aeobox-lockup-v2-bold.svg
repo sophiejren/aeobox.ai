@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- V2 · BOLD EDITORIAL — typographic brackets with prominent serif terminals, paired chunky quotes, custom-drawn wordmark with optical balance -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 140" role="img" aria-label="AEObox">
+  <title>AEObox</title>
+  <defs>
+    <linearGradient id="v2g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C5CFF"/>
+      <stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+    <linearGradient id="v2q" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#7C5CFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ============ MARK [A] ============ -->
+  <g transform="translate(0, 0)">
+    <!-- Left bracket — typographic with squared terminals -->
+    <path d="M 56 20 L 24 20 L 24 28 L 36 28 L 36 112 L 24 112 L 24 120 L 56 120 L 56 112 L 44 112 L 44 28 L 56 28 Z" fill="url(#v2g)"/>
+    <!-- Right bracket -->
+    <path d="M 144 20 L 176 20 L 176 28 L 164 28 L 164 112 L 176 112 L 176 120 L 144 120 L 144 112 L 156 112 L 156 28 L 144 28 Z" fill="url(#v2g)"/>
+    <!-- A — bold geometry -->
+    <path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 56 Z" fill="#F5F7FA"/>
+    <!-- Paired quotes replacing crossbar -->
+    <path d="M 84 60 Q 80 60 78 64 Q 76 68 76 74 L 76 82 L 86 82 L 86 72 L 82 72 Q 82 68 86 66 Z" fill="url(#v2q)"/>
+    <path d="M 120 82 Q 124 82 126 78 Q 128 74 128 68 L 128 60 L 118 60 L 118 70 L 122 70 Q 122 74 118 76 Z" fill="url(#v2q)"/>
+  </g>
+
+  <!-- ============ WORDMARK · custom-drawn letters ============ -->
+  <!-- Cap height 68, baseline 100, stroke 12 -->
+  <g transform="translate(200, 32)" fill="#F5F7FA">
+    <!-- A -->
+    <path d="M 0 76 L 30 0 L 42 0 L 72 76 L 58 76 L 51 56 L 21 56 L 14 76 Z M 26 44 L 46 44 L 36 17 Z"/>
+    <!-- E -->
+    <path d="M 86 0 L 138 0 L 138 12 L 100 12 L 100 32 L 132 32 L 132 44 L 100 44 L 100 64 L 138 64 L 138 76 L 86 76 Z"/>
+    <!-- O -->
+    <path d="M 188 0 C 167 0 152 17 152 38 C 152 59 167 76 188 76 C 209 76 224 59 224 38 C 224 17 209 0 188 0 Z M 188 12 C 202 12 211 23 211 38 C 211 53 202 64 188 64 C 174 64 165 53 165 38 C 165 23 174 12 188 12 Z"/>
+    <!-- b -->
+    <path d="M 236 0 L 248 0 L 248 30 C 252 26 258 22 268 22 C 283 22 294 35 294 50 C 294 65 283 78 268 78 C 258 78 252 74 248 70 L 248 76 L 236 76 Z M 265 33 C 256 33 248 41 248 50 C 248 59 256 67 265 67 C 274 67 282 59 282 50 C 282 41 274 33 265 33 Z"/>
+    <!-- o -->
+    <path d="M 326 22 C 311 22 300 35 300 50 C 300 65 311 78 326 78 C 341 78 352 65 352 50 C 352 35 341 22 326 22 Z M 326 33 C 335 33 340 41 340 50 C 340 59 335 67 326 67 C 317 67 312 59 312 50 C 312 41 317 33 326 33 Z"/>
+    <!-- x -->
+    <path d="M 358 24 L 372 24 L 384 41 L 396 24 L 410 24 L 391 49 L 412 76 L 397 76 L 384 58 L 371 76 L 356 76 L 377 49 Z"/>
+  </g>
+</svg>

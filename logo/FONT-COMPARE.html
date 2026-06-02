@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AEObox · Wordmark Font Comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Space+Grotesk:wght@600;700&family=Manrope:wght@700;800&family=Outfit:wght@600;700;800&family=IBM+Plex+Sans:wght@600;700&family=Recoleta:wght@700&family=DM+Sans:wght@700;800&family=Plus+Jakarta+Sans:wght@700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#F4F4F5; --ink:#06070D; --muted:#6B7280; --line:rgba(0,0,0,0.08); --accent:#7C5CFF; --accent2:#00D4FF;}
+  *{box-sizing:border-box} body{margin:0; font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--ink); padding:40px 28px;}
+  h1{font-size:32px; font-weight:800; letter-spacing:-1px; margin:0 0 8px;}
+  h1 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+  .sub{color:var(--muted); margin:0 0 36px; font-size:15px; max-width:780px; line-height:1.55;}
+  .legend{margin-bottom:28px; padding:14px 18px; background:#fff; border:1px solid var(--line); border-radius:10px; font-size:13px; color:var(--muted); line-height:1.55;}
+  .card{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; margin-bottom:20px;}
+  .head{padding:14px 22px; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between;}
+  .name{font-weight:700; font-size:15px;}
+  .meta{font-size:11px; color:var(--muted); font-family:Menlo,monospace; letter-spacing:0.04em;}
+  .row{display:grid; grid-template-columns:1fr 1fr; gap:0;}
+  .preview{padding:36px 28px; display:flex; align-items:center; gap:18px; min-height:140px;}
+  .preview.dark{background:#0B0D17;}
+  .preview.light{background:#FFFFFF; border-left:1px solid var(--line);}
+  .preview .mark{flex-shrink:0;}
+  .preview .wmk{font-weight:700; letter-spacing:-1.5px; font-size:54px; line-height:1; white-space:nowrap;}
+  .wmk-dark { color:#FFFFFF; }
+  .wmk-light{ color:#06070D; }
+  .mark svg{display:block;}
+  .pick{margin-top:32px; padding:18px 22px; background:#fff; border:2px solid var(--accent); border-radius:12px; font-size:14px;}
+  .pick strong{color:var(--accent);}
+  .badge{display:inline-block; padding:2px 7px; border-radius:5px; font-size:10px; font-weight:700; letter-spacing:.05em; background:rgba(124,92,255,.12); color:var(--accent);}
+</style>
+</head>
+<body>
+
+<h1><span class="grad">AEObox</span> · Wordmark Font Comparison</h1>
+<p class="sub">Mark stays the same (V5 gradient brackets [A] with paired-quote crossbar). Only the wordmark "AEObox" changes. Each row: same font on dark bg (white text) AND light bg (black text).</p>
+
+<div class="legend">
+  💡 <strong style="color:var(--ink)">Scroll to see all 8 candidates.</strong> They're sorted from most "tech/geometric" to most "premium/distinctive". Pick the row that feels most AEObox.
+</div>
+
+<!-- ============ MARK SVG (reused) ============ -->
+<svg style="display:none;">
+  <defs>
+    <linearGradient id="aG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+    <linearGradient id="aQ" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#7C5CFF"/>
+    </linearGradient>
+    <symbol id="markDark" viewBox="0 0 200 140">
+      <path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#aG)"/>
+      <path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#aG)"/>
+      <path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#F5F7FA"/>
+      <g fill="url(#aQ)">
+        <path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/>
+        <path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/>
+        <path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/>
+        <path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/>
+      </g>
+    </symbol>
+    <symbol id="markLight" viewBox="0 0 200 140">
+      <path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#aG)"/>
+      <path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#aG)"/>
+      <path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#06070D"/>
+      <g fill="url(#aQ)">
+        <path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/>
+        <path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/>
+        <path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/>
+        <path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Reusable rendering blocks -->
+<style>
+  .mark-dark svg, .mark-light svg { width:76px; height:54px; }
+</style>
+
+<!-- 1 · INTER -->
+<div class="card">
+  <div class="head"><div class="name">1 · Inter <span class="badge">CURRENT TECH DEFAULT</span></div><div class="meta">font-family: Inter, 800</div></div>
+  <div class="row">
+    <div class="preview dark"><div class="mark mark-dark"><svg><use href="#markDark"/></svg></div><div class="wmk wmk-dark" style="font-family:Inter,sans-serif; font-weight:800;">AEObox</div></div>
+    <div class="preview light"><div class="mark mark-light"><svg><use href="#markLight"/></svg></div><div class="wmk wmk-light" style="font-family:Inter,sans-serif; font-weight:800;">AEObox</div></div>
+  </div>
+</div>
+
+<!-- 2 · SPACE GROTESK -->
+<div class="card">
+  <div class="head"><div class="name">2 · Space Grotesk <span class="badge">VERCEL · LINEAR VIBE</span></div><div class="meta">font-family: Space Grotesk, 700</div></div>
+  <div class="row">
+    <div class="preview dark"><div class="mark mark-dark"><svg><use href="#markDark"/></svg></div><div class="wmk wmk-dark" style="font-family:'Space Grotesk',sans-serif; font-weight:700;">AEObox</div></div>
+    <div class="preview light"><div class="mark mark-light"><svg><use href="#markLight"/></svg></div><div class="wmk wmk-light" style="font-family:'Space Grotesk',sans-serif; font-weight:700;">AEObox</div></div>
+  </div>
+</div>
+
+<!-- 3 · MANROPE -->
+<div class="card">
+  <div class="head"><div class="name">3 · Manrope <span class="badge">FRIENDLY MODERN</span></div><div class="meta">font-family: Manrope, 800</div></div>
+  <div class="row">
+    <div class="preview dark"><div class="mark mark-dark"><svg><use href="#markDark"/></svg></div><div class="wmk wmk-dark" style="font-family:Manrope,sans-serif; font-weight:800;">AEObox</div></div>
+    <div class="preview light"><div class="mark mark-light"><svg><use href="#markLight"/></svg></div><div class="wmk wmk-light" style="font-family:Manrope,sans-serif; font-weight:800;">AEObox</div></div>
+  </div>
+</div>
+
+<!-- 4 · OUTFIT -->
+<div class="card">
+  <div class="head"><div class="name">4 · Outfit <span class="badge">FUTURISTIC GEOMETRIC</span></div><div class="meta">font-family: Outfit, 800</div></div>
+  <div class="row">
+    <div class="preview dark"><div class="mark mark-dark"><svg><use href="#markDark"/></svg></div><div class="wmk wmk-dark" style="font-family:Outfit,sans-serif; font-weight:800;">AEObox</div></div>
+    <div class="preview light"><div class="mark mark-light"><svg><use href="#markLight"/></svg></div><div class="wmk wmk-light" style="font-family:Outfit,sans-serif; font-weight:800;">AEObox</div></div>
+  </div>
+</div>
+
+<!-- 5 · IBM PLEX SANS -->
+<div class="card">
+  <div class="head"><div class="name">5 · IBM Plex Sans <span class="badge">ENGINEERED CORPORATE</span></div><div class="meta">font-family: IBM Plex Sans, 700</div></div>
+  <div class="row">
+    <div class="preview dark"><div class="mark mark-dark"><svg><use href="#markDark"/></svg></div><div class="wmk wmk-dark" style="font-family:'IBM Plex Sans',sans-serif; font-weight:700;">AEObox</div></div>
+    <div class="preview light"><div class="mark mark-light"><svg><use href="#markLight"/></svg></div><div class="wmk wmk-light" style="font-family:'IBM Plex Sans',sans-serif; font-weight:700;">AEObox</div></div>
+  </div>
+</div>
+
+<!-- 6 · DM Sans -->
+<div class="card">
+  <div class="head"><div class="name">6 · DM Sans <span class="badge">CLEAN & PROFESSIONAL</span></div><div class="meta">font-family: DM Sans, 800</div></div>
+  <div class="row">
+    <div class="preview dark"><div class="mark mark-dark"><svg><use href="#markDark"/></svg></div><div class="wmk wmk-dark" style="font-family:'DM Sans',sans-serif; font-weight:800;">AEObox</div></div>
+    <div class="preview light"><div class="mark mark-light"><svg><use href="#markLight"/></svg></div><div class="wmk wmk-light" style="font-family:'DM Sans',sans-serif; font-weight:800;">AEObox</div></div>
+  </div>
+</div>
+
+<!-- 7 · Plus Jakarta Sans -->
+<div class="card">
+  <div class="head"><div class="name">7 · Plus Jakarta Sans <span class="badge">PREMIUM SAAS</span></div><div class="meta">font-family: Plus Jakarta Sans, 800</div></div>
+  <div class="row">
+    <div class="preview dark"><div class="mark mark-dark"><svg><use href="#markDark"/></svg></div><div class="wmk wmk-dark" style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800;">AEObox</div></div>
+    <div class="preview light"><div class="mark mark-light"><svg><use href="#markLight"/></svg></div><div class="wmk wmk-light" style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800;">AEObox</div></div>
+  </div>
+</div>
+
+<!-- 8 · Sora -->
+<div class="card">
+  <div class="head"><div class="name">8 · Sora <span class="badge">MODERN AI/TECH BRAND</span></div><div class="meta">font-family: Sora, 800</div></div>
+  <div class="row">
+    <div class="preview dark"><div class="mark mark-dark"><svg><use href="#markDark"/></svg></div><div class="wmk wmk-dark" style="font-family:Sora,sans-serif; font-weight:800;">AEObox</div></div>
+    <div class="preview light"><div class="mark mark-light"><svg><use href="#markLight"/></svg></div><div class="wmk wmk-light" style="font-family:Sora,sans-serif; font-weight:800;">AEObox</div></div>
+  </div>
+</div>
+
+<div class="pick">
+  <strong>👇 告诉我编号(1-8)</strong>
+  <br/>选完我立刻:① 生成最终 lockup SVG(深色 + 浅色 + mono 黑 + mono 白 共 4 版本)② 替换全套资源(网站 + 邮件 + favicon)③ 推上线
+  <br/><br/>
+  我个人觉得 <strong>#2 Space Grotesk</strong>(科技品牌默认选择)或 <strong>#7 Plus Jakarta Sans</strong>(更 premium SaaS 感)最适合 AEObox 定位。
+</div>
+
+</body>
+</html>

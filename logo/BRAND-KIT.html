@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AEObox · Brand Kit</title>
+<style>
+  :root{
+    --ink-1:#06070D; --ink-2:#11142A; --bg:#F4F4F5;
+    --line:rgba(0,0,0,0.08); --muted:#6B7280; --dim:#9CA3AF;
+    --accent:#7C5CFF; --accent2:#00D4FF;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif; background:var(--bg); color:var(--ink-1); padding:48px 32px;}
+  h1{font-size:36px; font-weight:800; letter-spacing:-1px; margin:0 0 8px;}
+  h1 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+  .sub{color:var(--muted); margin:0 0 40px; font-size:16px; max-width:780px; line-height:1.55;}
+  h2{font-size:18px; font-weight:700; margin:48px 0 12px; padding-bottom:8px; border-bottom:1px solid var(--line);}
+  h2 .num{color:var(--accent); font-family:Menlo,monospace; margin-right:8px; font-size:14px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:20px;}
+  .card{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden;}
+  .preview{height:180px; display:flex; align-items:center; justify-content:center; padding:24px;}
+  .preview img{max-height:100%; max-width:100%; height:auto; width:auto; display:block;}
+  .preview.dark{background:linear-gradient(135deg, #0B0E1A 0%, #11142A 100%);}
+  .preview.light{background:#FFFFFF;}
+  .preview.photo-dark{background:linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);}
+  .preview.photo-light{background:linear-gradient(135deg, #f4e4ba 0%, #efbb9c 100%);}
+  .preview.purple-bg{background:#7C5CFF;}
+  .preview.cyan-bg{background:#00D4FF;}
+  .meta{padding:14px 18px; border-top:1px solid var(--line);}
+  .filename{font-family:Menlo,monospace; font-size:12px; color:var(--ink-1); font-weight:600;}
+  .desc{font-size:12px; color:var(--muted); margin-top:4px; line-height:1.4;}
+  .badge{display:inline-block; padding:2px 7px; border-radius:5px; font-size:10px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; margin-right:6px;}
+  .b-svg{background:rgba(124,92,255,0.12); color:#7C5CFF;}
+  .b-png{background:rgba(0,212,255,0.14); color:#0095B3;}
+  .section-note{font-size:13px; color:var(--muted); margin:0 0 18px; line-height:1.55;}
+  .palette{display:grid; grid-template-columns:repeat(4, 1fr); gap:14px;}
+  .swatch{padding:18px; border-radius:10px; color:#fff; font-family:Menlo,monospace; font-size:12px; line-height:1.4;}
+  .swatch strong{display:block; font-size:14px; margin-bottom:4px; font-family:'Inter',sans-serif; font-weight:700;}
+</style>
+</head>
+<body>
+
+<h1><span class="grad">AEObox</span> · Brand Kit</h1>
+<p class="sub">Complete color system for the V5 mark. Each variant has a specific use case — pick the one whose background matches your context.</p>
+
+<h2><span class="num">01</span>Color Palette</h2>
+<div class="palette">
+  <div class="swatch" style="background:#7C5CFF;"><strong>Primary Purple</strong>#7C5CFF</div>
+  <div class="swatch" style="background:#00D4FF; color:#06070D;"><strong>Primary Cyan</strong>#00D4FF</div>
+  <div class="swatch" style="background:#06070D;"><strong>Ink</strong>#06070D</div>
+  <div class="swatch" style="background:#F5F7FA; color:#06070D; border:1px solid var(--line);"><strong>Cloud</strong>#F5F7FA</div>
+</div>
+
+<h2><span class="num">02</span>Mark · 6 variants</h2>
+<p class="section-note">Use the mark when you have very little space (favicon, app icon, social avatar, watermark). Pair each with the right background.</p>
+<div class="grid">
+
+  <div class="card">
+    <div class="preview dark"><img src="aeobox-mark.svg" alt="dark variant"/></div>
+    <div class="meta">
+      <span class="badge b-svg">SVG</span><span class="badge b-png">PNG</span>
+      <div class="filename" style="margin-top:8px;">aeobox-mark.svg</div>
+      <div class="desc"><strong>Primary · Dark mode</strong> — gradient brackets + white A. Use on dark backgrounds (website nav, dark email, hero images).</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview light"><img src="aeobox-mark-light.svg" alt="light variant"/></div>
+    <div class="meta">
+      <span class="badge b-svg">SVG</span><span class="badge b-png">PNG</span>
+      <div class="filename" style="margin-top:8px;">aeobox-mark-light.svg</div>
+      <div class="desc"><strong>Primary · Light mode</strong> — gradient brackets + dark A. Use on white/light backgrounds (light emails, white pages, docs).</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview photo-dark"><img src="aeobox-mark-mono-white.svg" alt="mono white"/></div>
+    <div class="meta">
+      <span class="badge b-svg">SVG</span><span class="badge b-png">PNG</span>
+      <div class="filename" style="margin-top:8px;">aeobox-mark-mono-white.svg</div>
+      <div class="desc"><strong>Mono · White</strong> — all-white silhouette. Use over dark photos, video overlays, partner co-branded slides where gradient would clash.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview photo-light"><img src="aeobox-mark-mono-black.svg" alt="mono black"/></div>
+    <div class="meta">
+      <span class="badge b-svg">SVG</span><span class="badge b-png">PNG</span>
+      <div class="filename" style="margin-top:8px;">aeobox-mark-mono-black.svg</div>
+      <div class="desc"><strong>Mono · Black</strong> — all-black silhouette. Use for B&W print, invoice/contract footers, fax-style media, light photo overlays.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview light"><img src="aeobox-mark-purple.svg" alt="purple variant"/></div>
+    <div class="meta">
+      <span class="badge b-svg">SVG</span><span class="badge b-png">PNG</span>
+      <div class="filename" style="margin-top:8px;">aeobox-mark-purple.svg</div>
+      <div class="desc"><strong>Solid · Brand Purple</strong> #7C5CFF — when a single-color logo is required (print, embroidery, single-ink merch) and you want the warmer half of the brand.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview light"><img src="aeobox-mark-cyan.svg" alt="cyan variant"/></div>
+    <div class="meta">
+      <span class="badge b-svg">SVG</span><span class="badge b-png">PNG</span>
+      <div class="filename" style="margin-top:8px;">aeobox-mark-cyan.svg</div>
+      <div class="desc"><strong>Solid · Brand Cyan</strong> #00D4FF — same constraint, cooler/tech-forward half of the brand. Great for engineer-facing materials, dev portal headers.</div>
+    </div>
+  </div>
+
+</div>
+
+<h2><span class="num">03</span>Lockup (mark + wordmark) · 4 variants</h2>
+<p class="section-note">Use the full lockup when you have space (headers, slide title bars, business cards, signature blocks).</p>
+<div class="grid" style="grid-template-columns:1fr;">
+
+  <div class="card">
+    <div class="preview dark" style="height:140px;"><img src="aeobox-lockup-dark.svg" alt="lockup dark"/></div>
+    <div class="meta">
+      <span class="badge b-svg">SVG</span><span class="badge b-png">PNG</span>
+      <div class="filename" style="margin-top:8px;">aeobox-lockup-dark.svg</div>
+      <div class="desc">Primary lockup for dark backgrounds. The wordmark uses our custom V5 type with signature details (paired-quote A, bracket-foot terminals, raised b ascender).</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview light" style="height:140px;"><img src="aeobox-lockup-light.svg" alt="lockup light"/></div>
+    <div class="meta">
+      <span class="badge b-svg">SVG</span><span class="badge b-png">PNG</span>
+      <div class="filename" style="margin-top:8px;">aeobox-lockup-light.svg</div>
+      <div class="desc">Primary lockup for light backgrounds. Same geometry, dark wordmark.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview photo-dark" style="height:140px;"><img src="aeobox-lockup-mono-white.svg" alt="lockup mono white"/></div>
+    <div class="meta">
+      <span class="badge b-svg">SVG</span><span class="badge b-png">PNG</span>
+      <div class="filename" style="margin-top:8px;">aeobox-lockup-mono-white.svg</div>
+      <div class="desc">All-white silhouette lockup. Use on dark photos, partner decks, video lower-thirds.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview photo-light" style="height:140px;"><img src="aeobox-lockup-mono-black.svg" alt="lockup mono black"/></div>
+    <div class="meta">
+      <span class="badge b-svg">SVG</span><span class="badge b-png">PNG</span>
+      <div class="filename" style="margin-top:8px;">aeobox-lockup-mono-black.svg</div>
+      <div class="desc">All-black silhouette lockup. Use for invoices, legal docs, B&W print collateral.</div>
+    </div>
+  </div>
+
+</div>
+
+<h2><span class="num">04</span>Quick reference</h2>
+<table style="width:100%; max-width:800px; border-collapse:collapse; font-size:14px;">
+  <thead>
+    <tr style="background:#fff; border-bottom:2px solid var(--line);">
+      <th align="left" style="padding:10px 12px;">Use case</th>
+      <th align="left" style="padding:10px 12px;">File to use</th>
+    </tr>
+  </thead>
+  <tbody style="background:#fff;">
+    <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Website nav / dark page</td><td style="padding:10px 12px; font-family:Menlo,monospace; font-size:12px;">aeobox-mark.svg / aeobox-lockup-dark.svg</td></tr>
+    <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Email body / white doc</td><td style="padding:10px 12px; font-family:Menlo,monospace; font-size:12px;">aeobox-mark-light.svg / aeobox-lockup-light.svg</td></tr>
+    <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Photo overlay (dark photo)</td><td style="padding:10px 12px; font-family:Menlo,monospace; font-size:12px;">aeobox-mark-mono-white.svg / lockup-mono-white</td></tr>
+    <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Photo overlay (light photo)</td><td style="padding:10px 12px; font-family:Menlo,monospace; font-size:12px;">aeobox-mark-mono-black.svg / lockup-mono-black</td></tr>
+    <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Invoice / legal contract / B&W print</td><td style="padding:10px 12px; font-family:Menlo,monospace; font-size:12px;">aeobox-mark-mono-black.svg / lockup-mono-black</td></tr>
+    <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Single-ink merch / embroidery (purple)</td><td style="padding:10px 12px; font-family:Menlo,monospace; font-size:12px;">aeobox-mark-purple.svg</td></tr>
+    <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Single-ink merch / embroidery (cyan)</td><td style="padding:10px 12px; font-family:Menlo,monospace; font-size:12px;">aeobox-mark-cyan.svg</td></tr>
+    <tr style="border-bottom:1px solid var(--line);"><td style="padding:10px 12px;">Favicon / app icon</td><td style="padding:10px 12px; font-family:Menlo,monospace; font-size:12px;">favicon.svg + favicon-{32,48,180,192,512}.png</td></tr>
+    <tr><td style="padding:10px 12px;">Social share (OG / Twitter)</td><td style="padding:10px 12px; font-family:Menlo,monospace; font-size:12px;">aeobox-og.png (1200×630)</td></tr>
+  </tbody>
+</table>
+
+<p style="margin-top:48px; padding-top:24px; border-top:1px solid var(--line); font-size:12px; color:var(--muted);">
+AEObox brand kit · Part of DRLAMBDA · <a href="https://aeobox.ai" style="color:var(--accent); text-decoration:none;">aeobox.ai</a>
+</p>
+
+</body>
+</html>

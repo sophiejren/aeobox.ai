@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AEObox · Logo R2 — Quote Mark Refinement</title>
+<style>
+  :root{
+    --bg:#0B0E1A; --bg2:#11142A;
+    --text:#F5F7FA; --muted:#9CA3AF; --dim:#6B7280;
+    --line:rgba(255,255,255,0.08);
+    --accent:#7C5CFF; --accent2:#00D4FF;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif; background:var(--bg); color:var(--text); padding:48px 32px;}
+  h1{font-size:36px; font-weight:700; letter-spacing:-1px; margin:0 0 8px;}
+  h1 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+  .sub{color:var(--muted); margin:0 0 32px; font-size:16px; line-height:1.6; max-width:780px;}
+  .row{display:grid; grid-template-columns:120px 1fr 1fr 1fr 1fr; gap:20px; align-items:center; padding:24px 20px; border-top:1px solid var(--line);}
+  .row.header{border-top:0; padding-bottom:8px;}
+  .row.header div{font-size:11px; color:var(--dim); letter-spacing:.1em; text-transform:uppercase; font-weight:600;}
+  .label{font-size:12px; color:var(--muted); font-weight:500;}
+  .label strong{display:block; font-size:14px; color:var(--text); margin-bottom:3px;}
+  .cell{display:flex; align-items:center; justify-content:flex-start; min-height:60px;}
+  .badge{display:inline-block; padding:3px 9px; border-radius:6px; font-size:10px; font-weight:600; letter-spacing:.05em;}
+  .b1{background:rgba(156,163,175,0.18); color:var(--muted);}
+  .b15{background:rgba(34,197,94,0.20); color:#4ADE80;}
+  .b4{background:rgba(245,158,11,0.20); color:#FBBF24;}
+  .b41{background:rgba(168,85,247,0.20); color:#C084FC;}
+  .b2{background:rgba(124,92,255,0.20); color:#A78BFA;}
+  .name{font-weight:700; font-size:14px; margin-top:8px; margin-bottom:4px;}
+  .desc{font-size:11px; color:var(--muted); line-height:1.45;}
+  .verdict-card{margin-top:48px; padding:28px 32px; background:linear-gradient(135deg, rgba(34,197,94,.08), rgba(0,212,255,.05)); border:1px solid rgba(34,197,94,0.4); border-radius:16px;}
+  .verdict-card h2{margin:0 0 12px; font-size:22px;}
+  .verdict-card p{margin:0 0 12px; color:var(--muted); line-height:1.65;}
+  .verdict-card .pick{font-size:15px; color:var(--text); margin:14px 0 0;}
+  .legend{margin-bottom:24px; padding:14px 18px; background:rgba(255,255,255,.02); border:1px solid var(--line); border-radius:10px; font-size:13px; color:var(--muted); line-height:1.55;}
+  .stress{background:rgba(0,212,255,.10); padding:0 4px; border-radius:3px; color:var(--text);}
+</style>
+</head>
+<body>
+
+<h1><span class="grad">AEObox</span> · Logo R2 · Quote Mark Refinement</h1>
+<p class="sub">你的观察很关键 — <strong>小尺寸下引号看不见 = brand meaning 丢失</strong>。所以这一轮所有候选都把引号 chunky 化、尺寸放大,确保 28px nav size 都看得见。</p>
+
+<div class="legend">
+  <strong style="color:var(--text)">特别关注最上面的 nav 行(28px)</strong> — 这是你网站顶上 logo 的真实尺寸。引号在这个尺寸下能不能看清,直接决定 brand 识别度。
+</div>
+
+<div style="background:#08091A; border-radius:20px; padding:8px 24px;">
+
+  <div class="row header">
+    <div></div>
+    <div>V1 · 当前(对照组)</div>
+    <div>V1.5 · 原型 + 厚引号</div>
+    <div>V4 · Premium 原版</div>
+    <div>V4.1 · Premium · 引号加粗</div>
+  </div>
+
+  <!-- META row -->
+  <div class="row" style="padding-top:14px; padding-bottom:20px;">
+    <div class="label">设计</div>
+
+    <div class="cell" style="flex-direction:column; align-items:flex-start;">
+      <span class="badge b1">CURRENT</span>
+      <div class="name">原版</div>
+      <div class="desc">纤细弧线引号,28px 下完全看不见。</div>
+    </div>
+
+    <div class="cell" style="flex-direction:column; align-items:flex-start;">
+      <span class="badge b15">NEW 1.5</span>
+      <div class="name">圆润括号 + 厚引号</div>
+      <div class="desc">保留 V1 友好的圆润 stroke,但引号换成厚实填充版本。小尺寸下也能看见 "" 。</div>
+    </div>
+
+    <div class="cell" style="flex-direction:column; align-items:flex-start;">
+      <span class="badge b4">V4 原版</span>
+      <div class="name">Premium Minimalist</div>
+      <div class="desc">优雅典型括号 + 反转逗号引号。Premium 感最强,但小尺寸引号仍偏细。</div>
+    </div>
+
+    <div class="cell" style="flex-direction:column; align-items:flex-start;">
+      <span class="badge b41">V4.1 ⭐</span>
+      <div class="name">Premium + 引号优化</div>
+      <div class="desc">V4 的精致括号 + 放大加厚的引号。Premium 感不丢,小尺寸识别度上去。</div>
+    </div>
+  </div>
+
+  <!-- NAV 28px - 关键 -->
+  <div class="row" style="background:rgba(0,212,255,.04);">
+    <div class="label"><strong style="color:var(--accent2);">⚠ NAV 28px</strong>引号必须看得见</div>
+    <div class="cell"><img src="aeobox-lockup-dark.svg" style="height:28px; width:auto;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v1.5-bold-quotes.svg" style="height:28px; width:auto;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v4-premium.svg" style="height:28px; width:auto;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v4.1-polished.svg" style="height:28px; width:auto;"/></div>
+  </div>
+
+  <!-- HERO 60px -->
+  <div class="row">
+    <div class="label"><strong>HERO 60px</strong>主视觉</div>
+    <div class="cell"><img src="aeobox-lockup-dark.svg" style="height:60px; width:auto;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v1.5-bold-quotes.svg" style="height:60px; width:auto;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v4-premium.svg" style="height:60px; width:auto;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v4.1-polished.svg" style="height:60px; width:auto;"/></div>
+  </div>
+
+  <!-- 100px -->
+  <div class="row">
+    <div class="label"><strong>大图 100px</strong>about / OG</div>
+    <div class="cell"><img src="aeobox-lockup-dark.svg" style="height:100px; width:auto;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v1.5-bold-quotes.svg" style="height:100px; width:auto;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v4-premium.svg" style="height:100px; width:auto;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v4.1-polished.svg" style="height:100px; width:auto;"/></div>
+  </div>
+
+  <!-- Mark only 大 -->
+  <div class="row">
+    <div class="label"><strong>仅 Mark 大图</strong></div>
+    <div class="cell"><img src="aeobox-mark.svg" style="height:100px; width:auto;"/></div>
+    <div class="cell"><svg viewBox="0 0 200 140" style="height:100px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m15" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient><linearGradient id="m15q" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#7C5CFF"/></linearGradient></defs><path d="M 50 24 L 24 24 L 24 116 L 50 116" fill="none" stroke="url(#m15)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M 150 24 L 176 24 L 176 116 L 150 116" fill="none" stroke="url(#m15)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M 60 116 L 100 26 L 140 116" fill="none" stroke="#F5F7FA" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M 85 60 Q 78 60 78 70 Q 78 76 82 80 L 87 84 Q 87 80 83 78 Q 83 74 87 72 L 87 64 Q 87 60 85 60 Z" fill="url(#m15q)"/><path d="M 115 84 Q 122 84 122 74 Q 122 68 118 64 L 113 60 Q 113 64 117 66 Q 117 70 113 72 L 113 80 Q 113 84 115 84 Z" fill="url(#m15q)"/></svg></div>
+    <div class="cell"><svg viewBox="0 0 200 140" style="height:100px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m4b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient><linearGradient id="m4qb" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs><path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#m4b)"/><path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#m4b)"/><path d="M 100 28 L 64 116 L 78 116 L 86 96 L 114 96 L 122 116 L 136 116 Z M 91 84 L 109 84 L 100 60 Z" fill="#F5F7FA"/><g fill="url(#m4qb)"><path d="M 80 58 Q 73 58 73 67 Q 73 72 76 75 L 81 80 L 87 75 Q 90 71 90 65 Q 90 58 84 58 Z"/><path d="M 80 76 L 79 84 L 81 84 L 85 76 Z"/><path d="M 120 84 Q 127 84 127 75 Q 127 70 124 67 L 119 62 L 113 67 Q 110 71 110 77 Q 110 84 116 84 Z"/><path d="M 120 66 L 121 58 L 119 58 L 115 66 Z"/></g></svg></div>
+    <div class="cell"><svg viewBox="0 0 200 140" style="height:100px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m41" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient><linearGradient id="m41q" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#7C5CFF"/></linearGradient></defs><path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#m41)"/><path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#m41)"/><path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#F5F7FA"/><g fill="url(#m41q)"><path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/><path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/><path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/><path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/></g></svg></div>
+  </div>
+
+  <!-- Favicon 32px -->
+  <div class="row">
+    <div class="label"><strong>Favicon 32px</strong>浏览器 tab</div>
+    <div class="cell"><img src="aeobox-mark.svg" style="height:32px; width:auto;"/></div>
+    <div class="cell"><svg viewBox="0 0 200 140" style="height:32px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m15s" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient><linearGradient id="m15qs" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#7C5CFF"/></linearGradient></defs><path d="M 50 24 L 24 24 L 24 116 L 50 116" fill="none" stroke="url(#m15s)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M 150 24 L 176 24 L 176 116 L 150 116" fill="none" stroke="url(#m15s)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M 60 116 L 100 26 L 140 116" fill="none" stroke="#F5F7FA" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M 85 60 Q 78 60 78 70 Q 78 76 82 80 L 87 84 Q 87 80 83 78 Q 83 74 87 72 L 87 64 Q 87 60 85 60 Z" fill="url(#m15qs)"/><path d="M 115 84 Q 122 84 122 74 Q 122 68 118 64 L 113 60 Q 113 64 117 66 Q 117 70 113 72 L 113 80 Q 113 84 115 84 Z" fill="url(#m15qs)"/></svg></div>
+    <div class="cell"><svg viewBox="0 0 200 140" style="height:32px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m4s" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient><linearGradient id="m4qs" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient></defs><path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#m4s)"/><path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#m4s)"/><path d="M 100 28 L 64 116 L 78 116 L 86 96 L 114 96 L 122 116 L 136 116 Z M 91 84 L 109 84 L 100 60 Z" fill="#F5F7FA"/><g fill="url(#m4qs)"><path d="M 80 58 Q 73 58 73 67 Q 73 72 76 75 L 81 80 L 87 75 Q 90 71 90 65 Q 90 58 84 58 Z"/><path d="M 80 76 L 79 84 L 81 84 L 85 76 Z"/><path d="M 120 84 Q 127 84 127 75 Q 127 70 124 67 L 119 62 L 113 67 Q 110 71 110 77 Q 110 84 116 84 Z"/><path d="M 120 66 L 121 58 L 119 58 L 115 66 Z"/></g></svg></div>
+    <div class="cell"><svg viewBox="0 0 200 140" style="height:32px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="m41s" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient><linearGradient id="m41qs" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#7C5CFF"/></linearGradient></defs><path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#m41s)"/><path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#m41s)"/><path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#F5F7FA"/><g fill="url(#m41qs)"><path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/><path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/><path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/><path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/></g></svg></div>
+  </div>
+
+</div>
+
+<div class="verdict-card">
+  <h2>🏆 我重新评估的最佳选择:V4.1</h2>
+  <p>看小尺寸 nav 这一行就清楚了 — <strong>V4.1 是唯一一个在 28px 下引号仍然清晰可读</strong>的方案,而且不丢 V4 的 premium 感。它兼得"4A 高级"和"识别度"两个目标。</p>
+  <p class="pick"><strong>V1.5</strong> 是友好风派的最佳选择 — 如果你觉得 V4/V4.1 的方括号太"严肃"/"正式",V1.5 的圆润感更亲和,引号也够厚。但 premium 感弱一些。</p>
+
+  <p style="margin-top:18px;"><strong>告诉我 1 个字:</strong></p>
+  <p style="margin:0; font-size:15px; color:var(--text);">
+    👉 <span class="stress">V4.1</span> (premium · 推荐) <br/>
+    👉 <span class="stress">V1.5</span> (friendly) <br/>
+    👉 <span class="stress">V4</span> (原版 premium,引号细但优雅) <br/>
+    👉 或者 <strong>"再调"</strong>,告诉我哪里
+  </p>
+</div>
+
+</body>
+</html>

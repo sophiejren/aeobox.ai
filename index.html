@@ -224,9 +224,10 @@ input, textarea { font-family: inherit; }
 }
 .logo {
   display: flex; align-items: center; gap: 10px;
-  font-weight: 700; font-size: 18px;
-  letter-spacing: -0.01em;
+  text-decoration: none;
+  /* Fusion lockup: full SVG handles mark + wordmark — no text needed */
 }
+.logo-lockup { height: 28px; width: auto; display: block; }
 .logo-mark {
   width: 40px; height: 28px;
   display: inline-flex; align-items: center; justify-content: center;
@@ -935,7 +936,7 @@ input, textarea { font-family: inherit; }
   border-radius: var(--radius-xl);
   padding: clamp(36px, 5vw, 64px);
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* contains the radial-gradient ::before blur */
 }
 .audit-card::before {
   content: ''; position: absolute;
@@ -946,17 +947,29 @@ input, textarea { font-family: inherit; }
 }
 .audit-inner {
   display: grid; grid-template-columns: 1.2fr 1fr;
-  gap: 40px; align-items: center;
+  gap: 40px; align-items: start; /* was center — center caused H2 to clip when success state grew */
   position: relative; z-index: 2;
 }
 @media (max-width: 900px) { .audit-inner { grid-template-columns: 1fr; } }
 .audit-form {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "name domain"
+    "email btn";
+  gap: 10px;
 }
-@media (max-width: 640px) { .audit-form { grid-template-columns: 1fr; } }
+.audit-form input[name="name"]   { grid-area: name; }
+.audit-form input[name="domain"] { grid-area: domain; }
+.audit-form input[name="email"]  { grid-area: email; }
+.audit-form button               { grid-area: btn; }
+@media (max-width: 640px) {
+  .audit-form {
+    grid-template-columns: 1fr;
+    grid-template-areas: "name" "domain" "email" "btn";
+  }
+}
 .audit-form input {
   padding: 16px 20px;
   background: rgba(0,0,0,0.4);
@@ -2345,37 +2358,33 @@ input, textarea { font-family: inherit; }
 <!-- ====================== NAV ====================== -->
 <nav class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="#" class="logo">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="nav-aeo" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#7C5CFF"/>
-              <stop offset="100%" stop-color="#00D4FF"/>
-            </linearGradient>
-            <linearGradient id="nav-aeo-q" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#00D4FF"/>
-              <stop offset="100%" stop-color="#7C5CFF"/>
-            </linearGradient>
-          </defs>
-          <path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#nav-aeo)"/>
-          <path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#nav-aeo)"/>
-          <path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#F5F7FA"/>
-          <g fill="url(#nav-aeo-q)">
-            <path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/>
-            <path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/>
-            <path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/>
-            <path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/>
-          </g>
-        </svg>
-      </span>
-      AEObox
+    <a href="#" class="logo" aria-label="AEObox">
+      <svg class="logo-lockup" viewBox="0 0 680 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="nav-aeo" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7C5CFF"/>
+            <stop offset="100%" stop-color="#00D4FF"/>
+          </linearGradient>
+          <linearGradient id="nav-aeo-q" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#00D4FF"/>
+            <stop offset="100%" stop-color="#7C5CFF"/>
+          </linearGradient>
+        </defs>
+        <path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#nav-aeo)"/>
+        <path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#nav-aeo)"/>
+        <path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#F5F7FA"/>
+        <g fill="url(#nav-aeo-q)">
+          <path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/>
+          <path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/>
+          <path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/>
+          <path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/>
+        </g>
+        <text x="196" y="118" fill="#F5F7FA" font-family="Inter, -apple-system, BlinkMacSystemFont, system-ui, sans-serif" font-size="120" font-weight="800" letter-spacing="-4">EObox</text>
+      </svg>
     </a>
-    <a href="#concierge" class="nav-family-chip" title="Part of DRLAMBDA · content engine powered by ChatSlide.ai">
+    <a href="#concierge" class="nav-family-chip" title="Part of DRLAMBDA">
       <span class="nfc-label">by</span>
       <span class="nfc-brand">DRLAMBDA</span>
-      <span class="nfc-sep">·</span>
-      <span class="nfc-engine">ChatSlide engine</span>
     </a>
     <ul class="nav-links">
       <li><a href="#problem">Why AEO</a></li>
@@ -2881,6 +2890,7 @@ input, textarea { font-family: inherit; }
             action="/?audit=submitted">
             <input type="hidden" name="form-name" value="audit-request" />
             <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+            <input type="text" name="name" placeholder="Your name" autocomplete="given-name" />
             <input type="text" name="domain" placeholder="yourbrand.com" id="auditUrl" required />
             <input type="email" name="email" placeholder="you@brand.com" required />
             <button type="submit" id="auditBtn" class="btn btn-gradient">Run my AI audit <span class="arrow">→</span></button>
@@ -3318,31 +3328,29 @@ input, textarea { font-family: inherit; }
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand-col">
-        <a href="#" class="logo">
-          <span class="logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="foot-aeo" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#7C5CFF"/>
-                  <stop offset="100%" stop-color="#00D4FF"/>
-                </linearGradient>
-                <linearGradient id="foot-aeo-q" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#00D4FF"/>
-                  <stop offset="100%" stop-color="#7C5CFF"/>
-                </linearGradient>
-              </defs>
-              <path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#foot-aeo)"/>
-              <path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#foot-aeo)"/>
-              <path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#F5F7FA"/>
-              <g fill="url(#foot-aeo-q)">
-                <path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/>
-                <path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/>
-                <path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/>
-                <path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/>
-              </g>
-            </svg>
-          </span>
-          AEObox
+        <a href="#" class="logo" aria-label="AEObox">
+          <svg class="logo-lockup" viewBox="0 0 680 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="height:32px;">
+            <defs>
+              <linearGradient id="foot-aeo" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#7C5CFF"/>
+                <stop offset="100%" stop-color="#00D4FF"/>
+              </linearGradient>
+              <linearGradient id="foot-aeo-q" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#00D4FF"/>
+                <stop offset="100%" stop-color="#7C5CFF"/>
+              </linearGradient>
+            </defs>
+            <path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#foot-aeo)"/>
+            <path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#foot-aeo)"/>
+            <path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#F5F7FA"/>
+            <g fill="url(#foot-aeo-q)">
+              <path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/>
+              <path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/>
+              <path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/>
+              <path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/>
+            </g>
+            <text x="196" y="118" fill="#F5F7FA" font-family="Inter, -apple-system, BlinkMacSystemFont, system-ui, sans-serif" font-size="120" font-weight="800" letter-spacing="-4">EObox</text>
+          </svg>
         </a>
         <p>The done-for-you <strong style="color: var(--text);">AEO + GEO agency</strong> for global brands &amp; DTC. We get you cited by ChatGPT, Google AI Overview, Claude, Gemini, Grok &amp; DeepSeek — from $8K/mo.</p>
         <p style="margin-top: 8px; font-size: 12px; color: var(--text-dim);">Built by alumni of <strong style="color: var(--text-muted); font-weight: 500;">Stanford · UC Berkeley · Gartner · SAP</strong>.</p>
@@ -3669,6 +3677,7 @@ document.getElementById('contactModal').addEventListener('click', function(e){
     var data = new FormData(form);
     var domain = cleanDomain(data.get('domain'));
     var email = (data.get('email') || '').trim();
+    var personName = (data.get('name') || '').trim();
 
     // Fire-and-forget backup: post to Netlify Forms so Sophie has a record
     try {

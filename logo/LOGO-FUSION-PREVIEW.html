@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AEObox · Fusion Lockup Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#F4F4F5; --ink:#06070D; --muted:#6B7280; --line:rgba(0,0,0,0.08); --accent:#7C5CFF; --accent2:#00D4FF;}
+  *{box-sizing:border-box} body{margin:0; font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--ink); padding:40px 28px;}
+  h1{font-size:32px; font-weight:800; letter-spacing:-1px; margin:0 0 8px;}
+  h1 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+  .sub{color:var(--muted); margin:0 0 32px; font-size:15px; max-width:780px; line-height:1.55;}
+  .concept{padding:18px 22px; background:linear-gradient(135deg, rgba(124,92,255,.08), rgba(0,212,255,.05)); border:1px solid rgba(124,92,255,.3); border-radius:12px; font-size:14px; line-height:1.6; margin-bottom:32px;}
+  .concept strong{color:var(--accent);}
+  .card{background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden; margin-bottom:20px;}
+  .head{padding:14px 22px; border-bottom:1px solid var(--line); font-weight:600; font-size:14px;}
+  .preview{padding:48px 32px; display:flex; align-items:center; justify-content:center; min-height:200px;}
+  .preview.dark{background:#0B0D17;}
+  .preview.light{background:#FFFFFF;}
+  .preview img{max-height:120px; max-width:90%; height:auto;}
+  .label{padding:10px 22px; background:#FAFAFB; font-size:12px; color:var(--muted); border-top:1px solid var(--line); font-family:Menlo,monospace;}
+  .sizes{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; margin-top:16px;}
+  .size-card{background:#fff; padding:24px; border:1px solid var(--line); border-radius:10px; text-align:center;}
+  .size-card.dark{background:#0B0D17;}
+  .size-card img{max-width:100%; height:auto;}
+  .size-card .lbl{font-size:11px; color:var(--muted); margin-top:10px; font-family:Menlo,monospace;}
+</style>
+</head>
+<body>
+
+<h1><span class="grad">AEObox</span> · Fusion Lockup</h1>
+<p class="sub">The bracketed <code>[A]</code> mark IS the A of AEObox. Wordmark only shows "EObox" — saving a letter, creating brand DNA.</p>
+
+<div class="concept">
+  💡 <strong>Concept:</strong> The brand mark serves double duty — it's both the visual symbol AND a literal letter in the wordmark. The bracketed <code>[A]</code> on the left is read as the capital A of "AEObox", followed seamlessly by "EObox" in matching weight. Reading order: <strong>[A] EObox = AEObox</strong>.
+  <br/><br/>
+  ✅ Brand mark and wordmark are visually rhymed (impossible to separate)
+  <br/>✅ One fewer letter to design = cleaner, more iconic
+  <br/>✅ Bracketed A becomes the brand's "knot" — instantly recognizable
+</div>
+
+<!-- WHITE BG -->
+<div class="card">
+  <div class="head">1 · WHITE BACKGROUND (standard emails, documents, light pages)</div>
+  <div class="preview light">
+    <img src="aeobox-lockup-fusion-light.svg" alt="Fusion lockup light"/>
+  </div>
+  <div class="label">aeobox-lockup-fusion-light.svg · A and EObox are black, brackets + quotes stay gradient</div>
+</div>
+
+<!-- DARK BG -->
+<div class="card">
+  <div class="head">2 · DARK BACKGROUND (website nav, dark hero, dark email mode)</div>
+  <div class="preview dark">
+    <img src="aeobox-lockup-fusion-dark.svg" alt="Fusion lockup dark"/>
+  </div>
+  <div class="label">aeobox-lockup-fusion-dark.svg · A and EObox are white, brackets + quotes stay gradient</div>
+</div>
+
+<!-- SIZE TEST -->
+<h2 style="margin:40px 0 8px; font-size:18px;">Size test — does it work at small sizes?</h2>
+<p class="sub" style="margin-bottom:16px;">If the wordmark is unreadable at nav size, we have a problem.</p>
+<div class="sizes">
+  <div class="size-card">
+    <img src="aeobox-lockup-fusion-light.svg" style="height:24px;"/>
+    <div class="lbl">24px (compact nav)</div>
+  </div>
+  <div class="size-card">
+    <img src="aeobox-lockup-fusion-light.svg" style="height:36px;"/>
+    <div class="lbl">36px (standard nav)</div>
+  </div>
+  <div class="size-card">
+    <img src="aeobox-lockup-fusion-light.svg" style="height:60px;"/>
+    <div class="lbl">60px (hero)</div>
+  </div>
+  <div class="size-card dark">
+    <img src="aeobox-lockup-fusion-dark.svg" style="height:24px;"/>
+    <div class="lbl" style="color:#9CA3AF;">24px dark</div>
+  </div>
+  <div class="size-card dark">
+    <img src="aeobox-lockup-fusion-dark.svg" style="height:36px;"/>
+    <div class="lbl" style="color:#9CA3AF;">36px dark</div>
+  </div>
+  <div class="size-card dark">
+    <img src="aeobox-lockup-fusion-dark.svg" style="height:60px;"/>
+    <div class="lbl" style="color:#9CA3AF;">60px dark</div>
+  </div>
+</div>
+
+<div style="margin-top:40px; padding:20px 24px; background:#fff; border:2px solid var(--accent); border-radius:12px;">
+  <strong style="color:var(--accent);">满意吗?</strong>
+  <ul style="margin:10px 0 0 0; padding-left:20px; line-height:1.7; font-size:14px;">
+    <li><strong>满意</strong> → 我立刻生成 4 个变体(light/dark/mono-white/mono-black)+ PNG + 全套替换 + push</li>
+    <li><strong>"EObox" 字间距要更紧 / 更松</strong> → 告诉我</li>
+    <li><strong>"EObox" 要更小 / 更大</strong> → 告诉我</li>
+    <li><strong>"EObox" 要换字体</strong>(不要 Inter)→ 告诉我用哪个</li>
+    <li><strong>方括号要再厚一点 / A 再大一点</strong> → 告诉我</li>
+  </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AEObox · V5 Wordmark Signature Details</title>
+<style>
+  :root{ --bg:#0B0E1A; --bg2:#11142A; --text:#F5F7FA; --muted:#9CA3AF; --dim:#6B7280; --line:rgba(255,255,255,0.08); --accent:#7C5CFF; --accent2:#00D4FF; }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:'Inter',-apple-system,system-ui,sans-serif; background:var(--bg); color:var(--text); padding:48px 32px;}
+  h1{font-size:36px; font-weight:700; letter-spacing:-1px; margin:0 0 8px;}
+  h1 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+  .sub{color:var(--muted); margin:0 0 32px; font-size:16px; line-height:1.6; max-width:780px;}
+  .compare{background:#08091A; border-radius:20px; padding:8px 24px; margin-bottom:32px;}
+  .row{display:grid; grid-template-columns:140px 1fr 1fr; gap:20px; align-items:center; padding:24px 20px; border-top:1px solid var(--line);}
+  .row.header{border-top:0; padding-bottom:0;}
+  .row.header div{font-size:11px; color:var(--dim); letter-spacing:.1em; text-transform:uppercase; font-weight:600;}
+  .label{font-size:12px; color:var(--muted);}
+  .label strong{display:block; font-size:14px; color:var(--text); margin-bottom:3px;}
+  .cell{display:flex; align-items:center; justify-content:flex-start;}
+  .badge{display:inline-block; padding:3px 9px; border-radius:6px; font-size:10px; font-weight:600;}
+  .b41{background:rgba(168,85,247,0.20); color:#C084FC;}
+  .b5{background:rgba(34,197,94,0.25); color:#4ADE80;}
+
+  .details{margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .detail{padding:24px; background:var(--bg2); border:1px solid var(--line); border-radius:12px;}
+  .detail .num{display:inline-flex; width:36px; height:36px; border-radius:8px; align-items:center; justify-content:center; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff; font-weight:700; margin-bottom:14px;}
+  .detail h3{margin:0 0 8px; font-size:16px;}
+  .detail p{margin:0 0 14px; color:var(--muted); font-size:13px; line-height:1.55;}
+  .detail .demo{background:#08091A; border:1px solid var(--line); border-radius:8px; padding:16px; display:flex; justify-content:center; align-items:center; min-height:90px;}
+  .verdict{margin-top:48px; padding:28px 32px; background:linear-gradient(135deg, rgba(34,197,94,.08), rgba(0,212,255,.05)); border:1px solid rgba(34,197,94,0.4); border-radius:16px;}
+  .verdict h2{margin:0 0 12px;}
+  .verdict p{margin:0 0 14px; color:var(--muted); line-height:1.65;}
+</style>
+</head>
+<body>
+
+<h1><span class="grad">AEObox</span> · V5 · Wordmark Signature Details</h1>
+<p class="sub">你说得对 —— V4.1 字体只是"合格几何 sans",没有 brand DNA 锚点。V5 在 V4.1 基础上加 3 个 <strong>signature details</strong>,让 wordmark 从"通用"变"独占"。</p>
+
+<div class="compare">
+  <div class="row header">
+    <div></div>
+    <div>V4.1 · 上一版(基线)</div>
+    <div>V5 · 加 3 个 signature ⭐</div>
+  </div>
+
+  <div class="row" style="padding:14px 20px 20px;">
+    <div class="label">设计</div>
+    <div class="cell" style="flex-direction:column; align-items:flex-start;">
+      <span class="badge b41">V4.1</span>
+      <div style="margin-top:6px; font-size:13px; color:var(--muted);">没有签名细节,字母"合格但匿名"</div>
+    </div>
+    <div class="cell" style="flex-direction:column; align-items:flex-start;">
+      <span class="badge b5">V5 SIGNATURE</span>
+      <div style="margin-top:6px; font-size:13px; color:var(--muted);">A 的横杠 = 引号 / E b 加 bracket 终端 / b 略升起</div>
+    </div>
+  </div>
+
+  <div class="row" style="background:rgba(0,212,255,.04);">
+    <div class="label"><strong style="color:var(--accent2);">NAV 28px</strong>实战</div>
+    <div class="cell"><img src="aeobox-lockup-v4.1-polished.svg" style="height:28px;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v5-signature.svg" style="height:28px;"/></div>
+  </div>
+
+  <div class="row">
+    <div class="label"><strong>HERO 60px</strong></div>
+    <div class="cell"><img src="aeobox-lockup-v4.1-polished.svg" style="height:60px;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v5-signature.svg" style="height:60px;"/></div>
+  </div>
+
+  <div class="row">
+    <div class="label"><strong>大图 100px</strong></div>
+    <div class="cell"><img src="aeobox-lockup-v4.1-polished.svg" style="height:100px;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v5-signature.svg" style="height:100px;"/></div>
+  </div>
+
+  <div class="row">
+    <div class="label"><strong>放大 180px</strong>看细节</div>
+    <div class="cell"><img src="aeobox-lockup-v4.1-polished.svg" style="height:180px;"/></div>
+    <div class="cell"><img src="aeobox-lockup-v5-signature.svg" style="height:180px;"/></div>
+  </div>
+</div>
+
+<h2 style="font-size:24px; margin:48px 0 8px;">V5 的 3 个 signature details</h2>
+<p style="color:var(--muted); margin:0 0 20px;">每个都解决一个具体的 brand 问题。</p>
+
+<div class="details">
+
+  <div class="detail">
+    <div class="num">1</div>
+    <h3>Cap A 的横杠 = paired quotes</h3>
+    <p><strong style="color:var(--text);">问题:</strong> Mark 的 [A] 有引号,但 wordmark 的 A 没有 —— brand DNA 断裂。<br/><br/><strong style="color:var(--text);">解决:</strong> wordmark 的 A 横杠也用一对引号(微缩版)。同一个 idea 在 mark + wordmark 出现 2 次,brand 视觉闭环。</p>
+    <div class="demo"><svg viewBox="0 0 90 90" style="height:80px;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="d1q" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#7C5CFF"/></linearGradient></defs><g fill="#F5F7FA"><path d="M 5 86 L 35 0 L 41 0 L 24 43 L 19 86 Z"/><path d="M 41 0 L 47 0 L 77 86 L 63 86 L 58 43 Z"/><path d="M 24 43 L 58 43 L 56 51 L 26 51 Z"/></g><g fill="url(#d1q)"><path d="M 33 47 Q 30 47 30 51 Q 30 54 32 55 L 35 57 Q 35 55 33 54 Q 33 52 35 51 L 35 48 Q 35 47 33 47 Z"/><path d="M 49 57 Q 52 57 52 53 Q 52 50 50 49 L 47 47 Q 47 49 49 50 Q 49 52 47 53 L 47 56 Q 47 57 49 57 Z"/></g></svg></div>
+  </div>
+
+  <div class="detail">
+    <div class="num">2</div>
+    <h3>E / b / x 加 bracket-style 终端</h3>
+    <p><strong style="color:var(--text);">问题:</strong> Wordmark 和 mark 几何语言不一致 —— mark 是方括号,wordmark 是纯曲线。<br/><br/><strong style="color:var(--text);">解决:</strong> E 的横臂末端、b 的底脚、x 的 4 个角都加 8% 长度的 micro-bracket 小脚。远看不出来,近看是同一套 design language。</p>
+    <div class="demo"><svg viewBox="0 0 230 90" style="height:80px;" xmlns="http://www.w3.org/2000/svg" fill="#F5F7FA"><rect x="0" y="6" width="14" height="82"/><path d="M 0 6 L 56 6 L 56 19 L 56 22 L 51 22 L 51 19 L 14 19 L 14 6 Z"/><rect x="0" y="42" width="48" height="13"/><path d="M 0 75 L 14 75 L 14 88 L 56 88 L 56 75 L 56 72 L 51 72 L 51 75 Z"/><rect x="84" y="0" width="14" height="88"/><rect x="80" y="86" width="22" height="3"/><path d="M 98 32 C 102 28 109 26 117 26 C 134 26 146 39 146 54 C 146 69 134 82 117 82 C 109 82 102 80 98 76 L 98 64 C 102 69 107 71 115 71 C 124 71 132 63 132 54 C 132 45 124 37 115 37 C 107 37 102 39 98 44 Z"/></svg></div>
+  </div>
+
+  <div class="detail">
+    <div class="num">3</div>
+    <h3>"box" 的 b 比 O 高出 4px</h3>
+    <p><strong style="color:var(--text);">问题:</strong> AEObox 6 个字母如果完全平齐,没有视觉节奏 —— "AEO" 焦点不清。<br/><br/><strong style="color:var(--text);">解决:</strong> b 的 ascender 略高于 O 的 cap height,o + x 是 x-height。形成 "AEO" 主调 + "box" 次调的层次。读者一眼锁定 AEO,再延伸到 box。</p>
+    <div class="demo" style="padding:20px 12px;">
+      <div style="display:flex; align-items:flex-end; gap:0; transform:scale(1.0);">
+        <svg viewBox="0 0 80 90" style="height:80px;" fill="#F5F7FA" xmlns="http://www.w3.org/2000/svg"><text x="0" y="78" font-family="serif" font-size="78" fill="#9CA3AF" font-weight="800">A</text></svg>
+        <svg viewBox="0 0 80 90" style="height:80px;" fill="#F5F7FA" xmlns="http://www.w3.org/2000/svg"><text x="0" y="78" font-family="serif" font-size="78" fill="#9CA3AF" font-weight="800">E</text></svg>
+        <svg viewBox="0 0 80 90" style="height:80px;" fill="#F5F7FA" xmlns="http://www.w3.org/2000/svg"><text x="0" y="78" font-family="serif" font-size="78" fill="#9CA3AF" font-weight="800">O</text></svg>
+        <svg viewBox="0 0 80 90" style="height:80px;" fill="#F5F7FA" xmlns="http://www.w3.org/2000/svg"><text x="0" y="78" font-family="serif" font-size="78" fill="#F5F7FA" font-weight="800" style="transform:translateY(-4px);">b</text></svg>
+        <svg viewBox="0 0 80 90" style="height:80px;" fill="#F5F7FA" xmlns="http://www.w3.org/2000/svg"><text x="0" y="78" font-family="serif" font-size="56" fill="#F5F7FA" font-weight="800">o</text></svg>
+        <svg viewBox="0 0 80 90" style="height:80px;" fill="#F5F7FA" xmlns="http://www.w3.org/2000/svg"><text x="0" y="78" font-family="serif" font-size="56" fill="#F5F7FA" font-weight="800">x</text></svg>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="verdict">
+  <h2>🎯 V5 是终版,我的推荐</h2>
+  <p>这一版字体不再是"通用 geometric sans",而是 <strong>"AEObox 独占字体"</strong>。3 个 signature details 加起来让 wordmark:
+  <br/>① 和 mark 形成 brand DNA 闭环(A 的引号横杠)
+  <br/>② 和 mark 共享几何语言(bracket 终端)
+  <br/>③ 有视觉层次和节奏(b 升起)
+  </p>
+  <p style="margin-top:18px;"><strong>3 个回答中选 1 个:</strong></p>
+  <p style="font-size:15px; color:var(--text); margin:0;">
+    👉 <strong>V5 通过</strong> · 我开始全套替换<br/>
+    👉 <strong>V5 但 X 再调</strong> · 告诉我哪个细节再改<br/>
+    👉 <strong>3 个 signature 选 1 个用</strong> · 不全要(比如只要 A 引号,不要 bracket 终端)
+  </p>
+</div>
+
+</body>
+</html>

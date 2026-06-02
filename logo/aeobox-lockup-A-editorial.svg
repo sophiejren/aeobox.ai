@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DIRECTION A · EDITORIAL — Wordmark uses transitional serif influence: slight stroke modulation, ball terminals, restrained serifs. Conveys: publication-grade authority. "AEObox" reads like a Stratechery or NYT Style masthead. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 140" role="img" aria-label="AEObox">
+  <title>AEObox</title>
+  <defs>
+    <linearGradient id="Ag" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7C5CFF"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient>
+    <linearGradient id="Aq" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00D4FF"/><stop offset="100%" stop-color="#7C5CFF"/></linearGradient>
+  </defs>
+
+  <!-- MARK -->
+  <g transform="translate(0, 0)">
+    <path d="M 58 22 L 24 22 L 24 118 L 58 118 L 58 110 L 34 110 L 34 30 L 58 30 Z" fill="url(#Ag)"/>
+    <path d="M 142 22 L 176 22 L 176 118 L 142 118 L 142 110 L 166 110 L 166 30 L 142 30 Z" fill="url(#Ag)"/>
+    <path d="M 100 26 L 62 118 L 78 118 L 86 96 L 114 96 L 122 118 L 138 118 Z M 90 84 L 110 84 L 100 58 Z" fill="#F5F7FA"/>
+    <g fill="url(#Aq)">
+      <path d="M 78 58 Q 70 58 70 68 Q 70 75 75 80 L 82 86 L 86 80 Q 90 76 90 70 Q 90 58 84 58 Z"/>
+      <path d="M 81 80 L 76 88 L 80 88 L 86 82 Z"/>
+      <path d="M 122 86 Q 130 86 130 76 Q 130 69 125 64 L 118 58 L 114 64 Q 110 68 110 74 Q 110 86 116 86 Z"/>
+      <path d="M 119 64 L 124 56 L 120 56 L 114 62 Z"/>
+    </g>
+  </g>
+
+  <!-- WORDMARK · Editorial serif influence: modulated strokes, slab terminals, ball details -->
+  <g transform="translate(212, 32)" fill="#F5F7FA">
+    <!-- A — pointed apex with serif foot brackets, modulated outer strokes (thicker), thinner inside -->
+    <g>
+      <!-- Left outer (thicker) -->
+      <path d="M 0 76 L 30 0 L 38 0 L 22 38 L 14 76 Z"/>
+      <!-- Right outer (thicker) -->
+      <path d="M 38 0 L 42 0 L 72 76 L 58 76 L 50 38 Z"/>
+      <!-- Crossbar (thinner — editorial contrast) -->
+      <path d="M 22 38 L 50 38 L 48 44 L 24 44 Z"/>
+      <!-- Serif feet on both bottom legs -->
+      <rect x="-4" y="73" width="22" height="4"/>
+      <rect x="54" y="73" width="22" height="4"/>
+    </g>
+    <!-- E — slab serif terminals (thick verticals at top/mid/bottom arm ends) -->
+    <g>
+      <rect x="92" y="0" width="13" height="76"/>
+      <path d="M 92 0 L 142 0 L 142 14 L 105 14 L 105 0 Z"/>
+      <!-- top arm slab terminal -->
+      <rect x="138" y="0" width="4" height="14"/>
+      <rect x="92" y="33" width="40" height="11"/>
+      <path d="M 92 62 L 105 62 L 105 76 L 142 76 L 142 62 L 142 62 Z"/>
+      <rect x="138" y="62" width="4" height="14"/>
+    </g>
+    <!-- O — modulated (thicker vertical, thinner horizontal — classic transitional serif) -->
+    <path d="M 192 0 C 168 0 152 17 152 38 C 152 59 168 76 192 76 C 216 76 232 59 232 38 C 232 17 216 0 192 0 Z M 192 10 C 208 10 220 22 220 38 C 220 54 208 66 192 66 C 176 66 164 54 164 38 C 164 22 176 10 192 10 Z" fill="#F5F7FA"/>
+    <!-- b — with editorial ball terminal at top of ascender -->
+    <g>
+      <rect x="244" y="0" width="12" height="76"/>
+      <!-- Ball terminal at top -->
+      <circle cx="250" cy="0" r="4"/>
+      <path d="M 256 28 C 260 24 266 22 274 22 C 289 22 300 35 300 50 C 300 65 289 78 274 78 C 266 78 260 76 256 72 L 256 60 C 259 65 264 67 272 67 C 281 67 288 59 288 50 C 288 41 281 33 272 33 C 264 33 259 35 256 40 Z"/>
+    </g>
+    <!-- o — matches O modulation -->
+    <path d="M 334 22 C 318 22 306 35 306 50 C 306 65 318 78 334 78 C 350 78 362 65 362 50 C 362 35 350 22 334 22 Z M 334 32 C 343 32 352 40 352 50 C 352 60 343 68 334 68 C 325 68 316 60 316 50 C 316 40 325 32 334 32 Z"/>
+    <!-- x — with slab terminals (editorial style) -->
+    <g>
+      <path d="M 368 24 L 384 24 L 396 41 L 408 24 L 424 24 L 403 49 L 426 76 L 410 76 L 396 58 L 382 76 L 366 76 L 389 49 Z"/>
+      <!-- Slab feet on all 4 corners -->
+      <rect x="366" y="22" width="20" height="4"/>
+      <rect x="406" y="22" width="20" height="4"/>
+      <rect x="364" y="74" width="20" height="4"/>
+      <rect x="408" y="74" width="20" height="4"/>
+    </g>
+  </g>
+</svg>
