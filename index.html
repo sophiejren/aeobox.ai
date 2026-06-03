@@ -16,6 +16,9 @@
 <meta name="keywords" content="answer engine optimization, AEO platform, generative engine optimization, GEO, AI visibility, ChatGPT SEO, Claude SEO, Google AI Overview, DTC marketing, ecommerce AI" />
 <meta name="author" content="AEObox" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<!-- v1.2 · search engine verification (TODO Sophie: paste codes from Google Search Console + Bing Webmaster Tools) -->
+<meta name="google-site-verification" content="REPLACE_WITH_GSC_VERIFICATION_CODE" />
+<meta name="msvalidate.01" content="REPLACE_WITH_BING_VERIFICATION_CODE" />
 <link rel="canonical" href="https://aeobox.ai/" />
 <meta property="og:title" content="AEObox · AEO for Global Brands & DTC" />
 <meta property="og:description" content="See verbatim what ChatGPT, Claude, Gemini & Perplexity say about your brand. Free 2-minute audit · methodology open · 5 buyer queries × 4 engines tested live." />
@@ -2715,6 +2718,64 @@ input, textarea { font-family: inherit; }
 }
 </script>
 
+<!-- v1.2 · Person schema for Sophie (E-E-A-T signal · Author of all Insights + Strategy Calls) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://aeobox.ai/#sophie-ren",
+  "name": "Sophie Ren",
+  "givenName": "Sophie",
+  "familyName": "Ren",
+  "jobTitle": "Founder",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "AEObox",
+    "url": "https://aeobox.ai"
+  },
+  "url": "https://www.linkedin.com/in/sophie-r-60981b9b/",
+  "sameAs": [
+    "https://www.linkedin.com/in/sophie-r-60981b9b/",
+    "https://aeobox.ai/",
+    "https://drlambda.ai/"
+  ],
+  "knowsAbout": [
+    "Answer Engine Optimization",
+    "Generative Engine Optimization",
+    "AI search visibility",
+    "ChatGPT citation strategy",
+    "AEO for DTC brands"
+  ],
+  "alumniOf": [
+    { "@type": "EducationalOrganization", "name": "Stanford University" },
+    { "@type": "EducationalOrganization", "name": "UC Berkeley" }
+  ],
+  "email": "mailto:sophie@aeobox.ai"
+}
+</script>
+
+<!-- v1.2 · Speakable schema · cues voice assistants (Siri/Alexa/Gemini) to read these sections aloud -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://aeobox.ai/#webpage",
+  "url": "https://aeobox.ai/",
+  "name": "AEObox · The AEO Platform for Global Brands & DTC",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".hero-title", ".hero-sub", ".section-title", "#audit .section-sub"],
+    "xpath": [
+      "/html/head/title",
+      "//*[@class='hero-title']",
+      "//*[@class='hero-sub']"
+    ]
+  },
+  "isPartOf": { "@id": "https://aeobox.ai/#website" },
+  "primaryImageOfPage": { "@type": "ImageObject", "url": "https://aeobox.ai/logo/aeobox-og.png" }
+}
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -2842,6 +2903,95 @@ input, textarea { font-family: inherit; }
   "inLanguage": "en-US",
   "isPartOf": { "@id": "https://aeobox.ai/#website" }
 }
+</script>
+
+<!-- ============================================================
+     v1.2 · Analytics scaffolding · GA4 + Posthog
+     TODO Sophie: replace the 2 IDs below, then events fire automatically.
+     - GA4: ga.google.com → Admin → Property → Data Streams → Web → Measurement ID (G-XXXXXXXXXX)
+     - Posthog: posthog.com → Project → Settings → Project API Key (phc_XXXXXX)
+     If either ID is left as the placeholder, the script no-ops silently.
+     ============================================================ -->
+<script>
+  window.AEOBOX_ANALYTICS = {
+    ga4_measurement_id: 'REPLACE_WITH_G-XXXXXXXXXX',
+    posthog_api_key: 'REPLACE_WITH_phc_XXXXXX',
+    posthog_host: 'https://us.i.posthog.com'
+  };
+</script>
+<script>
+  (function() {
+    var cfg = window.AEOBOX_ANALYTICS || {};
+
+    // ----- GA4 (gtag) -----
+    if (cfg.ga4_measurement_id && cfg.ga4_measurement_id.indexOf('REPLACE') === -1) {
+      var ga = document.createElement('script');
+      ga.async = true;
+      ga.src = 'https://www.googletagmanager.com/gtag/js?id=' + cfg.ga4_measurement_id;
+      document.head.appendChild(ga);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { window.dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', cfg.ga4_measurement_id, { send_page_view: true });
+    } else {
+      window.gtag = function() {}; // no-op so calls below don't error
+    }
+
+    // ----- Posthog -----
+    if (cfg.posthog_api_key && cfg.posthog_api_key.indexOf('REPLACE') === -1) {
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init(cfg.posthog_api_key, { api_host: cfg.posthog_host, person_profiles: 'always' });
+    } else {
+      window.posthog = { capture: function(){}, identify: function(){} };
+    }
+
+    // ----- Unified tracker -----
+    function track(name, props) {
+      try { gtag('event', name, props || {}); } catch(e) {}
+      try { posthog.capture(name, props || {}); } catch(e) {}
+    }
+    window.aeoTrack = track;
+
+    // ----- Auto-wire after DOM ready -----
+    function wireUp() {
+      // CTA clicks
+      document.querySelectorAll('a[href="#audit"], a[href="#strategy-call"], a[href="#concierge"]').forEach(function(a) {
+        a.addEventListener('click', function() {
+          track('cta_click', { destination: a.getAttribute('href'), label: a.textContent.trim().slice(0, 60) });
+        });
+      });
+      // Audit form interactions
+      var form = document.getElementById('auditForm');
+      if (form) {
+        form.addEventListener('submit', function() { track('audit_form_submit', {}); });
+        var urlIn = document.getElementById('auditUrl');
+        if (urlIn) urlIn.addEventListener('blur', function() {
+          if (urlIn.value.trim().length > 3) track('audit_url_entered', { domain: urlIn.value.trim() });
+        });
+        var sharper = document.getElementById('auditSharper');
+        if (sharper) sharper.addEventListener('toggle', function() {
+          track('audit_sharper_toggled', { open: sharper.open });
+        });
+        ['auditQ1', 'auditQ2', 'auditQ3', 'auditC1', 'auditC2', 'auditC3', 'auditLI', 'auditMarket', 'auditRole'].forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el) el.addEventListener('change', function() {
+            track('audit_optional_field_filled', { field: id });
+          });
+        });
+      }
+      // Pricing tier hover/click (sales signal)
+      document.querySelectorAll('.cp-tier').forEach(function(tier) {
+        var name = (tier.querySelector('.cp-name') || {}).textContent || 'unknown';
+        tier.addEventListener('click', function() { track('pricing_tier_clicked', { tier: name }); });
+      });
+      // Manifesto link
+      document.querySelectorAll('a[href="#why-five"]').forEach(function(a) {
+        a.addEventListener('click', function() { track('manifesto_link_clicked', {}); });
+      });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', wireUp);
+    else wireUp();
+  })();
 </script>
 
 </head>
@@ -4396,6 +4546,26 @@ document.getElementById('contactModal').addEventListener('click', function(e){
   // Plan B: call Render audit service DIRECTLY (skip Netlify Function middle layer).
   // Netlify Forms still gets the submission for record-keeping (fire-and-forget backup).
   var AUDIT_SERVICE_URL = 'https://aeobox-audit.onrender.com';
+
+  // === Live audit counter — replaces hardcoded "47 audits running today"
+  var counterEl = document.getElementById('auditCounter');
+  function loadAuditCount() {
+    if (!counterEl) return;
+    fetch(AUDIT_SERVICE_URL + '/stats/audits-today', { cache: 'no-store' })
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(data) {
+        if (!data) return;
+        var n = data.last_24h || data.today || 0;
+        if (n >= 1) {
+          counterEl.textContent = n + ' audit' + (n === 1 ? '' : 's') + ' run today';
+        } else {
+          counterEl.textContent = 'Run the first audit today';
+        }
+      })
+      .catch(function() { /* keep the fallback text */ });
+  }
+  loadAuditCount();
+  setInterval(loadAuditCount, 60000); // refresh every 60s
 
   // === Smart placeholder · URL blur triggers Haiku to adapt query/competitor hints
   var urlInput = document.getElementById('auditUrl');
