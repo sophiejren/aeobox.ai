@@ -1049,6 +1049,12 @@ input, textarea { font-family: inherit; }
   position: relative; z-index: 2;
 }
 @media (max-width: 900px) { .audit-inner { grid-template-columns: 1fr; } }
+
+/* After submit: collapse to single column, hide decorative + right-side preview */
+.audit-card.submitted .audit-inner { grid-template-columns: 1fr; }
+.audit-card.submitted .audit-preview,
+.audit-card.submitted .audit-engines,
+.audit-card.submitted .audit-timeline { display: none; }
 /* === Engine chips row (above form) === */
 .audit-engines {
   display: flex; align-items: center; gap: 12px;
@@ -4501,11 +4507,15 @@ document.getElementById('contactModal').addEventListener('click', function(e){
         throw new Error('audit-service returned ' + resp.status + ': ' + errText);
       }
 
-      // Success: hide form, show success card
+      // Success: hide form, show success card. Add .submitted on audit-card
+      // so CSS collapses to single column and hides the right-side preview +
+      // decorative chips/timeline (fixes broken card border after submit).
       domainEcho.textContent = domain || 'your site';
       emailEcho.textContent = email || 'your inbox';
       form.style.display = 'none';
       if (features) features.style.display = 'none';
+      var auditCard = document.querySelector('.audit-card');
+      if (auditCard) auditCard.classList.add('submitted');
       success.style.display = 'block';
       success.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } catch (err) {
