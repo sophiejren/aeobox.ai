@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+  AEObox · aeobox.ai
+  Version: 1.1 · shipped 2026-06-02
+  Highlights: anti-volume positioning (5 queries × 4 engines beats 1,000 prompts),
+  audit form progressive disclosure (target market + role + queries + competitors + LinkedIn),
+  master-copy hero rewrite ("the most important sales pitch is happening right now"),
+  4 LLM engine chips visible, "what happens next" timeline, methodology-open transparency.
+-->
+<html lang="en" data-version="1.1">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AEObox · AEO Platform for DTC Brands | Get Cited by ChatGPT &amp; AI</title>
-<meta name="description" content="The Answer Engine Optimization agency for global brands &amp; DTC. Get cited by ChatGPT &amp; Google AI Overview. Real client wins: ChatGPT #1 / #2. Done-for-you from $8K/mo. Free 2-min audit." />
+<meta name="description" content="See verbatim what ChatGPT, Claude, Gemini &amp; Perplexity say about your brand — and your competitors. The Answer Engine Optimization agency for global brands &amp; DTC. Real ChatGPT #1 / #2 wins. Done-for-you from $8K/mo. Free 2-min audit · methodology open." />
 <meta name="keywords" content="answer engine optimization, AEO platform, generative engine optimization, GEO, AI visibility, ChatGPT SEO, Claude SEO, Google AI Overview, DTC marketing, ecommerce AI" />
 <meta name="author" content="AEObox" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <link rel="canonical" href="https://aeobox.ai/" />
 <meta property="og:title" content="AEObox · AEO for Global Brands & DTC" />
-<meta property="og:description" content="Get cited by ChatGPT, Google AI Overview, Claude, Gemini, Grok & DeepSeek. Built for ecommerce." />
+<meta property="og:description" content="See verbatim what ChatGPT, Claude, Gemini & Perplexity say about your brand. Free 2-minute audit · methodology open · 5 buyer queries × 4 engines tested live." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://aeobox.ai" />
 <meta property="og:image" content="logo/aeobox-og.png" />
@@ -18,7 +26,7 @@
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="AEObox · AEO + GEO Agency for Global Brands & DTC" />
-<meta name="twitter:description" content="Get cited by ChatGPT, Google AI Overview, Claude, Gemini, Grok & DeepSeek. Built for ecommerce." />
+<meta name="twitter:description" content="See verbatim what ChatGPT, Claude, Gemini & Perplexity say about your brand. Free 2-minute audit · methodology open · 5 buyer queries × 4 engines tested live." />
 <meta name="twitter:image" content="logo/aeobox-og.png" />
 <meta name="theme-color" content="#06070D" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -317,8 +325,85 @@ input, textarea { font-family: inherit; }
   letter-spacing: 0.02em;
 }
 @media (max-width: 720px) { .nav-family-chip { display: none; } }
+
+/* ==========================================================================
+   MOBILE NAV DRAWER (hamburger menu) — kicks in below 860px
+   ========================================================================== */
+.nav-burger {
+  display: none;
+  width: 44px; height: 44px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+.nav-burger:hover, .nav-burger:focus-visible { background: var(--surface-2); outline: none; }
+.nav-burger svg { width: 20px; height: 20px; stroke: var(--text); stroke-width: 2; fill: none; }
+.nav-drawer-backdrop {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(6,7,13,0.7);
+  backdrop-filter: blur(8px);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.nav-drawer-backdrop.open { display: block; opacity: 1; }
+.nav-drawer {
+  position: fixed; top: 0; right: -100%;
+  width: min(86vw, 360px); height: 100vh;
+  background: linear-gradient(180deg, #0B0D17 0%, #06070D 100%);
+  border-left: 1px solid var(--border-strong);
+  z-index: 999;
+  padding: 80px 28px 32px;
+  display: flex; flex-direction: column;
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+.nav-drawer.open { right: 0; }
+.nav-drawer-close {
+  position: absolute; top: 20px; right: 20px;
+  width: 40px; height: 40px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-drawer-close svg { width: 18px; height: 18px; stroke: var(--text); stroke-width: 2; fill: none; }
+.nav-drawer a {
+  display: block;
+  padding: 14px 16px;
+  font-size: 16px; font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+  min-height: 44px; line-height: 1.4;
+}
+.nav-drawer a:hover, .nav-drawer a:focus-visible { background: var(--surface); outline: none; }
+.nav-drawer .drawer-divider {
+  height: 1px; background: var(--border);
+  margin: 12px 0;
+}
+.nav-drawer .drawer-cta {
+  margin-top: auto; padding-top: 24px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.nav-drawer .drawer-cta a {
+  text-align: center;
+  font-weight: 600;
+}
+.nav-drawer .drawer-cta a.btn-gradient {
+  background: var(--grad-primary);
+  color: #fff;
+}
+
 @media (max-width: 860px) {
   .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .nav-burger { display: inline-flex; }
 }
 
 /* ==========================================================================
@@ -964,50 +1049,285 @@ input, textarea { font-family: inherit; }
   position: relative; z-index: 2;
 }
 @media (max-width: 900px) { .audit-inner { grid-template-columns: 1fr; } }
+/* === Engine chips row (above form) === */
+.audit-engines {
+  display: flex; align-items: center; gap: 12px;
+  margin-top: 18px; flex-wrap: wrap;
+}
+.ae-label {
+  font-size: 11px; color: var(--text-dim);
+  text-transform: uppercase; letter-spacing: 0.12em;
+  font-weight: 600;
+}
+.ae-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.ae-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 11.5px;
+  color: var(--text);
+}
+.ae-dot {
+  width: 12px; height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.ae-counter {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-left: auto;
+}
+.ae-counter::before {
+  content: "● ";
+  color: var(--success);
+  font-size: 8px;
+  vertical-align: 2px;
+}
+
+/* === Audit form (v5 vertical layout) === */
 .audit-form {
-  margin-top: 24px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "name domain"
-    "email btn";
+  margin-top: 16px;
+  display: flex; flex-direction: column;
   gap: 10px;
 }
-.audit-form input[name="name"]   { grid-area: name; }
-.audit-form input[name="domain"] { grid-area: domain; }
-.audit-form input[name="email"]  { grid-area: email; }
-.audit-form button               { grid-area: btn; }
-@media (max-width: 640px) {
-  .audit-form {
-    grid-template-columns: 1fr;
-    grid-template-areas: "name" "domain" "email" "btn";
-  }
+.audit-form > input[name="domain"],
+.audit-form > input[name="email"] { width: 100%; }
+.audit-form .audit-form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+/* First two inputs side-by-side via wrapping in CSS subgrid-like trick — use flex hack */
+.audit-form > input[name="domain"]:first-of-type {
+  /* Domain + email displayed via flex container — handled by JS-free CSS */
 }
-.audit-form input {
-  padding: 16px 20px;
+
+.audit-form input,
+.audit-form select {
+  padding: 14px 18px;
   background: rgba(0,0,0,0.4);
   border: 1px solid var(--border-strong);
   border-radius: 12px;
   color: var(--text);
-  font-size: 15px;
+  font-size: 14px;
   outline: none;
   transition: border 0.2s;
   min-width: 0;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
 }
-.audit-form input:focus { border-color: var(--accent-2); }
+.audit-form input:focus,
+.audit-form select:focus { border-color: var(--accent-2); }
 .audit-form input::placeholder { color: var(--text-dim); }
-.audit-features {
-  margin-top: 22px;
-  display: flex; gap: 22px; flex-wrap: wrap;
-  font-size: 13px; color: var(--text-muted);
+.audit-form select { appearance: none; cursor: pointer; }
+.audit-form .audit-submit { margin-top: 4px; padding: 16px 24px; font-size: 15px; }
+
+/* Row helpers */
+.audit-form > .audit-form-row-2 {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
 }
-.audit-features span { display: flex; align-items: center; gap: 6px; }
+
+/* === Progressive disclosure: "Make this audit yours" === */
+.audit-sharper {
+  margin: 4px 0;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.025);
+  padding: 14px 16px;
+}
+.audit-sharper summary {
+  cursor: pointer;
+  font-size: 13px; font-weight: 500;
+  color: var(--text);
+  list-style: none;
+  display: flex; align-items: center; gap: 8px;
+}
+.audit-sharper summary::-webkit-details-marker { display: none; }
+.audit-sharper .as-chev {
+  font-size: 14px; color: var(--text-muted);
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.audit-sharper[open] .as-chev { transform: rotate(0deg); }
+.audit-sharper:not([open]) .as-chev { transform: rotate(-90deg); }
+.audit-sharper .as-time { color: var(--text-muted); font-weight: 400; }
+.audit-sharper .as-recommended {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--accent-2);
+  font-weight: 500;
+  background: rgba(0,212,255,0.10);
+  padding: 3px 9px;
+  border-radius: 100px;
+}
+.as-body { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+.as-section-label {
+  font-size: 10.5px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.as-ic { color: var(--accent-2); }
+.as-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+.as-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 18px; }
+.as-label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  margin-top: 2px;
+}
+.as-hint { color: var(--text-dim); font-weight: 400; }
+.as-body input { padding: 10px 14px; font-size: 13px; margin-bottom: 6px; }
+.as-body select { padding: 10px 12px; font-size: 13px; }
+.as-divider {
+  height: 0;
+  border-top: 1px dashed var(--border);
+  margin: 8px 0 14px;
+}
+
+/* === What happens next timeline === */
+.audit-timeline {
+  margin-top: 14px;
+  padding: 11px 14px;
+  background: rgba(255,255,255,0.025);
+  border-radius: 12px;
+  display: flex; align-items: center; gap: 10px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+.at-label {
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-size: 10.5px;
+}
+.at-label::before {
+  content: "★ ";
+  color: var(--accent-2);
+}
+.at-step { color: var(--text-muted); }
+.at-step.at-final { color: var(--text); font-weight: 500; }
+.at-arrow { color: var(--text-dim); }
+
+/* === Features chips === */
+.audit-features {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+@media (max-width: 540px) { .audit-features { grid-template-columns: 1fr; } }
+.audit-features span { display: flex; align-items: flex-start; gap: 6px; }
 .audit-features .check {
   width: 16px; height: 16px;
   border-radius: 50%;
   background: rgba(16, 229, 161, 0.15);
   display: flex; align-items: center; justify-content: center;
   color: var(--success); font-size: 10px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* === Manifesto · "Why 1,000 is theater" === */
+.manifesto {
+  background: linear-gradient(180deg, rgba(124,92,255,0.04) 0%, rgba(0,212,255,0.02) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: clamp(36px, 5vw, 56px);
+}
+.manifesto-deck {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: clamp(17px, 1.5vw, 21px);
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 18px 0 36px;
+  max-width: 760px;
+}
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 36px;
+  margin-bottom: 32px;
+}
+@media (max-width: 800px) { .manifesto-grid { grid-template-columns: 1fr; gap: 24px; } }
+.manifesto-block h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 10px;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+}
+.manifesto-block p {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+.manifesto-cta {
+  margin-top: 8px;
+  padding: 22px 26px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.manifesto-cta-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 540px;
+  line-height: 1.55;
+}
+.manifesto-cta-text strong { color: var(--text); font-weight: 600; }
+
+/* === Footer links (Concierge teaser + Why 1000 is theater) === */
+.audit-footer-links {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-dim);
+  flex-wrap: wrap;
+}
+.audit-footer-links em { color: var(--text-muted); font-style: italic; }
+.audit-footer-links strong { color: var(--text-muted); font-weight: 500; }
+.audit-footer-links a { color: var(--accent-2); text-decoration: none; }
+.audit-footer-links .audit-counter-link { white-space: nowrap; }
+
+/* Make domain+email sit side-by-side on row 1 via :nth-child trick */
+.audit-form > input[name="domain"] {
+  grid-column: 1;
+}
+/* Use flex wrapping to fake the 2-col row */
+.audit-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.audit-form > input[name="domain"] { grid-column: 1; }
+.audit-form > input[name="email"]  { grid-column: 2; }
+.audit-form > input[name="name"]   { grid-column: 1 / -1; }
+.audit-form > .audit-sharper       { grid-column: 1 / -1; }
+.audit-form > .audit-submit        { grid-column: 1 / -1; }
+.audit-form > p[hidden]            { grid-column: 1 / -1; }
+.audit-form > input[type="hidden"] { display: none; }
+@media (max-width: 540px) {
+  .audit-form { grid-template-columns: 1fr; }
+  .as-row-3 { grid-template-columns: 1fr; }
+  .as-row-2 { grid-template-columns: 1fr; }
 }
 .audit-preview {
   background: rgba(11, 13, 23, 0.6);
@@ -1788,11 +2108,74 @@ input, textarea { font-family: inherit; }
 /* ==========================================================================
    REVEAL ON SCROLL
    ========================================================================== */
+/* ==========================================================================
+   ANIMATION SYSTEM · scroll-triggered reveals + stat counters + card hover
+   ========================================================================== */
 .reveal {
-  opacity: 0; transform: translateY(20px);
-  transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 .reveal.in { opacity: 1; transform: translateY(0); }
+
+/* Stagger children when inside a .reveal-stagger container */
+.reveal-stagger > * {
+  opacity: 0; transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-stagger.in > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(2) { transition-delay: 0.13s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(3) { transition-delay: 0.21s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(4) { transition-delay: 0.29s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(5) { transition-delay: 0.37s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(6) { transition-delay: 0.45s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(7) { transition-delay: 0.53s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(8) { transition-delay: 0.61s; opacity: 1; transform: translateY(0); }
+
+/* Subtle scale-in for cards */
+.reveal-scale { opacity: 0; transform: scale(0.96); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal-scale.in { opacity: 1; transform: scale(1); }
+
+/* Stat counter — base style for animated numbers */
+.stat-counter { font-variant-numeric: tabular-nums; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.stat-counter.in { animation: pulseScale 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+@keyframes pulseScale {
+  0% { transform: scale(0.9); }
+  60% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+/* Generic card hover lift (applies to .lift class) */
+.lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  will-change: transform;
+}
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px -16px rgba(0,0,0,0.55), 0 0 0 1px rgba(124,92,255,0.20);
+  border-color: rgba(124,92,255,0.35);
+}
+
+/* Gradient glow pulse for hero CTA */
+.btn-gradient { position: relative; overflow: hidden; }
+.btn-gradient::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.18), transparent 40%);
+  opacity: 0; transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.btn-gradient:hover::after { opacity: 1; }
+.btn-gradient:active { transform: scale(0.97); }
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-scale, .reveal-stagger > *, .stat-counter, .lift, .btn-gradient {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
 
 /* ==========================================================================
    UTILITY
@@ -1964,10 +2347,11 @@ input, textarea { font-family: inherit; }
 .concierge-prices {
   margin-top: 32px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
-@media (max-width: 900px) { .concierge-prices { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .concierge-prices { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .concierge-prices { grid-template-columns: 1fr; } }
 .cp-tier {
   padding: 22px 20px;
   background: rgba(0, 0, 0, 0.3);
@@ -2085,6 +2469,77 @@ input, textarea { font-family: inherit; }
 .family-row a { color: var(--text); font-weight: 600; }
 .family-row a:hover { color: var(--accent-2); }
 .family-row .you { color: var(--accent-2); }
+
+/* ==========================================================================
+   MOBILE DEEP POLISH · ≤480px (phones)
+   ========================================================================== */
+@media (max-width: 480px) {
+  /* Container padding */
+  .container { padding-left: 18px; padding-right: 18px; }
+
+  /* Hero — tighter, larger touch targets */
+  .hero { padding: 100px 0 40px; }
+  .hero-title { font-size: clamp(34px, 9.5vw, 44px) !important; line-height: 1.05; letter-spacing: -1.5px; }
+  .hero-sub { font-size: 15px !important; line-height: 1.55; }
+  .hero-ctas { display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
+  .hero-ctas .btn { width: 100%; justify-content: center; padding: 14px 20px; min-height: 50px; }
+  .hero-text-link { text-align: center; padding: 8px; }
+
+  /* Section titles + spacing */
+  .section { padding: 56px 0; }
+  .section-tight { padding: 40px 0; }
+  .section-title { font-size: clamp(26px, 7vw, 34px) !important; line-height: 1.15; letter-spacing: -1px; }
+  .section-sub { font-size: 15px !important; }
+  .section-head { margin-bottom: 28px; }
+
+  /* Audit card */
+  .audit-card { padding: 32px 22px !important; }
+  .audit-form input, .audit-form button { padding: 14px 16px; font-size: 15px; min-height: 50px; }
+
+  /* Pricing + concierge cards */
+  .pricing-card, .concierge-card { padding: 28px 22px !important; }
+  .pricing-amount { font-size: 38px !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 28px 18px; }
+  .footer-brand-col { grid-column: span 2; }
+  .footer-col h4 { font-size: 13px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; font-size: 12px; }
+
+  /* All buttons have ≥44px touch target */
+  .btn { min-height: 44px; padding: 12px 18px; }
+  .btn-sm { min-height: 40px; padding: 10px 14px; }
+
+  /* Logo lockup smaller on small screens */
+  .logo-lockup { height: 24px; }
+
+  /* Hide the audit preview on tiny screens — focus on the form */
+  .audit-preview { display: none; }
+  .audit-inner { grid-template-columns: 1fr !important; }
+
+  /* Modal padding */
+  .modal-content { padding: 24px 20px !important; max-height: 90vh; overflow-y: auto; }
+  .modal-title { font-size: 20px !important; }
+
+  /* Stat bar */
+  .stat-bar { gap: 14px; padding: 18px; }
+  .stat-bar .stat { font-size: 13px; }
+
+  /* Reveal animations a touch faster (mobile = patience is lower) */
+  .reveal, .reveal-scale { transition-duration: 0.6s; }
+}
+
+/* ==========================================================================
+   TABLET POLISH · 481-768px
+   ========================================================================== */
+@media (max-width: 768px) and (min-width: 481px) {
+  .hero { padding: 120px 0 50px; }
+  .section { padding: 64px 0; }
+  .audit-card { padding: 40px 28px !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px 24px; }
+  .footer-brand-col { grid-column: span 2; }
+}
+
 </style>
 
 <!-- ============================================================
@@ -2305,16 +2760,31 @@ input, textarea { font-family: inherit; }
       {
         "@type": "Offer",
         "name": "Growth",
-        "price": "18000",
+        "price": "20000",
         "priceCurrency": "USD",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "18000",
+          "price": "20000",
           "priceCurrency": "USD",
           "billingDuration": "P1M",
           "unitText": "MONTH"
         },
         "description": "Pilot + content engine + 11 owned media distribution + Reddit. Where 7-8 figure brands land.",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Scale Lite",
+        "price": "30000",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "30000",
+          "priceCurrency": "USD",
+          "billingDuration": "P1M",
+          "unitText": "MONTH"
+        },
+        "description": "Growth + multilingual GEO + bi-weekly tracking. For brands going overseas in 2-4 markets at once.",
         "availability": "https://schema.org/InStock"
       },
       {
@@ -2334,6 +2804,37 @@ input, textarea { font-family: inherit; }
       }
     ]
   }
+}
+</script>
+
+<!-- ============================================================
+     SPEAKABLE Schema — tells AI engines (ChatGPT, Siri, Alexa,
+     Google Assistant, Gemini) which content to prefer when quoting
+     this page aloud or extracting answer-snippets.
+
+     <0.3% of DTC sites have this. The single highest-leverage AEO
+     signal we ship — and we use it on our own site.
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://aeobox.ai/#webpage",
+  "url": "https://aeobox.ai/",
+  "name": "AEObox · AEO Platform for DTC Brands",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".hero-title",
+      ".hero-sub",
+      ".faq-item",
+      ".faq-answer",
+      ".section-title",
+      ".speakable"
+    ]
+  },
+  "inLanguage": "en-US",
+  "isPartOf": { "@id": "https://aeobox.ai/#website" }
 }
 </script>
 
@@ -2406,12 +2907,34 @@ input, textarea { font-family: inherit; }
       <li><a href="#concierge">Pricing</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <div class="nav-actions">
+    <div class="nav-actions nav-cta">
       <button type="button" onclick="openContactModal()" class="btn btn-sm btn-ghost">Talk to us</button>
       <a href="#audit" class="btn btn-sm btn-primary">Start free audit <span class="arrow">→</span></a>
     </div>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" onclick="openDrawer()">
+      <svg viewBox="0 0 24 24" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer-backdrop" id="navBackdrop" onclick="closeDrawer()"></div>
+<aside class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu" aria-modal="true">
+  <button type="button" class="nav-drawer-close" aria-label="Close menu" onclick="closeDrawer()">
+    <svg viewBox="0 0 24 24" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+  </button>
+  <a href="#problem" onclick="closeDrawer()">Why AEO</a>
+  <a href="#concierge" onclick="closeDrawer()">Services</a>
+  <a href="#how" onclick="closeDrawer()">How it works</a>
+  <a href="#concierge" onclick="closeDrawer()">Pricing</a>
+  <a href="#insights" onclick="closeDrawer()">Insights</a>
+  <a href="#faq" onclick="closeDrawer()">FAQ</a>
+  <div class="drawer-divider"></div>
+  <div class="drawer-cta">
+    <button type="button" onclick="closeDrawer(); openContactModal();" class="btn btn-ghost" style="background:transparent; border:1px solid var(--border-strong); color:var(--text); padding:14px;">Talk to us</button>
+    <a href="#audit" onclick="closeDrawer()" class="btn btn-gradient" style="padding:14px; color:#fff;">Start free audit →</a>
+  </div>
+</aside>
 
 <!-- ====================== HERO ====================== -->
 <section class="hero">
@@ -2536,17 +3059,17 @@ input, textarea { font-family: inherit; }
   <div class="container">
     <div class="stat-bar-inner">
       <div class="stat-bar-item">
-        <div class="stat-num grad-text">+1,079%</div>
+        <div class="stat-num grad-text"><span data-counter="1079" data-counter-prefix="+" data-counter-suffix="%">+0%</span></div>
         <div class="stat-lbl">ChatGPT shopping sessions growth</div>
         <div class="stat-src">Visibility Labs · 94 DTC brands · 2025</div>
       </div>
       <div class="stat-bar-item">
-        <div class="stat-num">31% ↑</div>
+        <div class="stat-num"><span data-counter="31" data-counter-suffix="% ↑">0%</span></div>
         <div class="stat-lbl">Conversion rate vs. organic search</div>
         <div class="stat-src">Search Engine Land · 2026</div>
       </div>
       <div class="stat-bar-item">
-        <div class="stat-num grad-text-warm">−58%</div>
+        <div class="stat-num grad-text-warm"><span data-counter="58" data-counter-prefix="−" data-counter-suffix="%">−0%</span></div>
         <div class="stat-lbl">CTR drop on pages losing to AI Overview</div>
         <div class="stat-src">Ahrefs Search Study 2026</div>
       </div>
@@ -2890,9 +3413,22 @@ input, textarea { font-family: inherit; }
     <div class="audit-card reveal">
       <div class="audit-inner">
         <div>
-          <span class="eyebrow"><span class="dot"></span>Free · No credit card · 2 minutes</span>
-          <h2 class="section-title" style="font-size: clamp(28px, 3.5vw, 44px); margin-top: 18px;">Where does your brand show up when 1,000 users ask AI?</h2>
-          <p class="section-sub">Drop your domain. We'll fire 1,000 real buyer prompts at ChatGPT, Google AI Overview, Claude &amp; Gemini — and email you the breakdown of where you appeared (and where your competitors stole the answer).</p>
+          <span class="eyebrow"><span class="dot"></span>Free · 2 minutes · the methodology is open</span>
+          <h2 class="section-title" style="font-size: clamp(28px, 3.5vw, 44px); margin-top: 18px; line-height: 1.05;">The most important sales pitch about your category <span class="grad-text">is happening right now.</span></h2>
+          <p class="section-sub" style="font-style: italic; font-size: clamp(17px, 1.6vw, 22px); color: var(--text-muted); margin-bottom: 14px;">It's ChatGPT — talking to your next customer. <strong style="color: var(--text); font-weight: 600; font-style: normal;">You're not in the room.</strong></p>
+          <p class="section-sub" style="font-size: 14.5px; color: var(--text-dim); line-height: 1.65;">We'll show you what it's saying — verbatim. What your competitors are saying. And which buyer queries you've already lost. Across ChatGPT, Claude, Gemini, and Perplexity. In two minutes. Free.</p>
+          <!-- Engine chips row -->
+          <div class="audit-engines">
+            <span class="ae-label">Tested across</span>
+            <div class="ae-chips">
+              <span class="ae-chip"><i class="ae-dot" style="background:#10A37F;"></i>ChatGPT</span>
+              <span class="ae-chip"><i class="ae-dot" style="background:#D97706;"></i>Claude</span>
+              <span class="ae-chip"><i class="ae-dot" style="background:#4285F4;"></i>Gemini</span>
+              <span class="ae-chip"><i class="ae-dot" style="background:#1FB6FF;"></i>Perplexity</span>
+            </div>
+            <span class="ae-counter" id="auditCounter">47 audits running today</span>
+          </div>
+
           <form
             id="auditForm"
             class="audit-form"
@@ -2903,22 +3439,95 @@ input, textarea { font-family: inherit; }
             action="/?audit=submitted">
             <input type="hidden" name="form-name" value="audit-request" />
             <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+            <!-- Required row 1: URL + Email -->
+            <input type="text" name="domain" placeholder="Your brand URL" id="auditUrl" required />
+            <input type="email" name="email" placeholder="Where to send the report" required />
+
+            <!-- Required row 2: Name -->
             <input type="text" name="name" placeholder="Your name" autocomplete="given-name" />
-            <input type="text" name="domain" placeholder="yourbrand.com" id="auditUrl" required />
-            <input type="email" name="email" placeholder="you@brand.com" required />
-            <button type="submit" id="auditBtn" class="btn btn-gradient">Run my AI audit <span class="arrow">→</span></button>
+
+            <!-- Optional · progressive disclosure -->
+            <details class="audit-sharper" id="auditSharper" open>
+              <summary>
+                <span class="as-chev">▾</span>
+                Make this audit yours, not generic. <span class="as-time">~60 seconds</span>
+                <span class="as-recommended">recommended</span>
+              </summary>
+
+              <div class="as-body">
+                <div class="as-section-label"><span class="as-ic">◎</span>Test your battle</div>
+
+                <div class="as-row-2">
+                  <select name="target_market" id="auditMarket">
+                    <option value="">Target market — select…</option>
+                    <option value="us">United States / North America</option>
+                    <option value="europe">Europe</option>
+                    <option value="asia">Asia (incl. China / Japan / Korea)</option>
+                    <option value="global">Global / multi-region</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <select name="role" id="auditRole">
+                    <option value="">Your role — select…</option>
+                    <option value="founder">Founder / CEO</option>
+                    <option value="cmo">CMO / Marketing lead</option>
+                    <option value="growth">Growth / Demand gen</option>
+                    <option value="product">Product</option>
+                    <option value="agency">Agency / Consultant</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <label class="as-label">3 queries you should be the answer for</label>
+                <input type="text" name="query_1" id="auditQ1" placeholder='e.g. "best AI agent for solo founders"' />
+                <input type="text" name="query_2" id="auditQ2" placeholder='e.g. "managed OpenClaw alternative"' />
+                <input type="text" name="query_3" id="auditQ3" placeholder='e.g. "cheapest cloud AI assistant"' />
+
+                <label class="as-label">3 names you're losing those answers to</label>
+                <div class="as-row-3">
+                  <input type="text" name="competitor_1" id="auditC1" placeholder="manus.im" />
+                  <input type="text" name="competitor_2" id="auditC2" placeholder="lindy.ai" />
+                  <input type="text" name="competitor_3" id="auditC3" placeholder="mindstudio.ai" />
+                </div>
+
+                <div class="as-divider"></div>
+
+                <div class="as-section-label"><span class="as-ic">◐</span>About you</div>
+                <label class="as-label">LinkedIn URL <span class="as-hint">— so we know who's reading the report</span></label>
+                <input type="text" name="linkedin" id="auditLI" placeholder="linkedin.com/in/yourname" />
+              </div>
+            </details>
+
+            <button type="submit" id="auditBtn" class="btn btn-gradient audit-submit">Show me what AI says about my brand <span class="arrow">→</span></button>
           </form>
+
+          <!-- What happens next mini-timeline -->
+          <div class="audit-timeline">
+            <span class="at-label">What happens next</span>
+            <span class="at-step">Submit</span>
+            <span class="at-arrow">→</span>
+            <span class="at-step">~90s · 4 LLMs tested live</span>
+            <span class="at-arrow">→</span>
+            <span class="at-step at-final">Report in your inbox</span>
+          </div>
+
           <div class="audit-features" id="auditFeatures">
-            <span><span class="check">✓</span> 1,000 real prompts tested</span>
-            <span><span class="check">✓</span> 5 AI engines benchmarked</span>
-            <span><span class="check">✓</span> Competitor share-of-voice</span>
+            <span><span class="check">✓</span> 20 verbatim LLM responses — not simulations</span>
+            <span><span class="check">✓</span> Competitor share-of-voice per query</span>
+            <span><span class="check">✓</span> Every query printed — re-run it yourself</span>
+            <span><span class="check">✓</span> 5 queries that move money, not 1,000 that don't</span>
+          </div>
+
+          <div class="audit-footer-links">
+            <span>Snapshot today. Want citation share to <em>compound</em>? <strong>25 queries × 5 engines × monthly</strong> — <a href="#concierge">that's Concierge →</a></span>
+            <a href="#why-five" class="audit-counter-link">Why 1,000 is theater →</a>
           </div>
           <!-- Success state (shown after successful submit) -->
           <div id="auditSuccess" style="display:none; margin-top:18px; padding:22px 24px; border:1px solid rgba(124,92,255,0.45); border-radius:14px; background:linear-gradient(135deg, rgba(124,92,255,0.10), rgba(0,212,255,0.07));">
             <div style="font-size:30px; line-height:1; margin-bottom:10px;">📧</div>
             <strong style="display:block; font-size:18px; margin-bottom:8px; color:var(--text);">Got it — your audit is running.</strong>
             <p style="margin:0; color:var(--text-muted); font-size:14px; line-height:1.55;">
-              We're crawling <strong style="color:var(--text);" id="auditDomainEcho">your site</strong> right now and testing it against ~1,000 buyer prompts across ChatGPT, Google AI Overview, Claude &amp; Gemini.<br/>
+              We're testing <strong style="color:var(--text);" id="auditDomainEcho">your site</strong> right now against the buyer queries you specified, live across ChatGPT, Claude, Gemini &amp; Perplexity — and pulling verbatim responses so you can see exactly what your prospects see.<br/>
               <strong style="color:var(--text);">Your branded report will land at <span id="auditEmailEcho">your inbox</span> within 90 seconds.</strong> Check spam if it's slow — or reply to that email and Sophie will jump in.
             </p>
           </div>
@@ -2955,6 +3564,44 @@ input, textarea { font-family: inherit; }
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== WHY 1,000 IS THEATER ====================== -->
+<section class="section section-tight" id="why-five">
+  <div class="container">
+    <div class="manifesto reveal">
+      <span class="eyebrow"><span class="dot"></span>Manifesto · methodology · why we test 5</span>
+      <h2 class="section-title" style="font-size: clamp(28px, 3.4vw, 42px); line-height: 1.08;">Why 1,000 prompts is <span class="grad-text">theater.</span></h2>
+      <p class="manifesto-deck">Every AEO tool on the internet claims "1,000 real prompts tested." Almost none of them publish what those prompts are. Here's what's actually happening — and why we deliberately do less.</p>
+
+      <div class="manifesto-grid">
+        <div class="manifesto-block">
+          <h3>1 · The 1,000 number is a marketing trick</h3>
+          <p>To "test 1,000 prompts" against 4 LLMs costs roughly $7–15 per audit in real API calls. No free tool can absorb that at scale. So what they actually do: ask one cheap LLM to generate 1,000 variations of "best [category]" — then test the first 20, hide the other 980 in an unreadable summary, and call it "1,000 prompts tested." It's accounting, not measurement.</p>
+        </div>
+
+        <div class="manifesto-block">
+          <h3>2 · The other 980 wouldn't matter anyway</h3>
+          <p>An AI citation moves the needle when it appears for a query a real buyer would type with real intent. "Best agent for solo founders" is a buyer query. "Top AI tool reviewed in 2026" is not. The 980 are usually filler — synonym soup with no commercial intent. They inflate the report. They don't inflate your pipeline.</p>
+        </div>
+
+        <div class="manifesto-block">
+          <h3>3 · 5 queries that match your buyer beat 1,000 that don't</h3>
+          <p>Our free audit tests 5 — the 5 your buyers actually type. We print every query in the report, so you can re-run them yourself. If we test "managed OpenClaw alternative" and you're invisible, that's a fact you can act on tomorrow. If we test 1,000 generic variants and you're invisible on 643 of them, that's a paragraph nobody reads.</p>
+        </div>
+
+        <div class="manifesto-block">
+          <h3>4 · The free audit names the gap. Concierge moves the citation.</h3>
+          <p>We don't pretend a 2-minute free audit makes you cited. It tells you exactly where you're losing, on which queries, against whom. The work of actually winning those answers — schema, third-party citations, community seeding, content hubs — is what Concierge does. The audit is the diagnostic. Concierge is the treatment.</p>
+        </div>
+      </div>
+
+      <div class="manifesto-cta">
+        <span class="manifesto-cta-text"><strong>Honest measurement above marketing math.</strong> If you want a tool that promises 1,000 prompts and hides the methodology, we're the wrong agency.</span>
+        <a href="#audit" class="btn btn-gradient">Try the 5-query audit <span class="arrow">→</span></a>
       </div>
     </div>
   </div>
@@ -3165,7 +3812,7 @@ input, textarea { font-family: inherit; }
         </div>
       </div>
 
-      <!-- Concierge pricing tiers: 3-tier structure -->
+      <!-- Concierge pricing tiers: 4-tier structure (v1.1) -->
       <div class="concierge-prices">
         <div class="cp-tier">
           <div class="cp-head"><span class="cp-name">Pilot</span></div>
@@ -3174,8 +3821,13 @@ input, textarea { font-family: inherit; }
         </div>
         <div class="cp-tier featured">
           <div class="cp-head"><span class="cp-name">Growth</span><span class="cp-badge">Most popular</span></div>
-          <span class="cp-price">$18,000<span class="cp-mo">/mo</span></span>
+          <span class="cp-price">$20,000<span class="cp-mo">/mo</span></span>
           <span class="cp-unit">Pilot + content engine + 11 owned media distribution + Reddit. Where 7-8 figure brands land.</span>
+        </div>
+        <div class="cp-tier">
+          <div class="cp-head"><span class="cp-name">Scale Lite</span></div>
+          <span class="cp-price">$30,000<span class="cp-mo">/mo</span></span>
+          <span class="cp-unit">Growth + multilingual GEO + bi-weekly tracking. For brands going overseas in 2–4 markets at once.</span>
         </div>
         <div class="cp-tier">
           <div class="cp-head"><span class="cp-name">Scale</span></div>
@@ -3456,16 +4108,75 @@ function setPriceMode(mode) {
   });
 }
 
-// Reveal on scroll
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('in');
-      io.unobserve(e.target);
+// =====================================================================
+// MOBILE NAV DRAWER
+// =====================================================================
+function openDrawer() {
+  document.getElementById('navDrawer').classList.add('open');
+  document.getElementById('navBackdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+  document.getElementById('navDrawer').classList.remove('open');
+  document.getElementById('navBackdrop').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape' && document.getElementById('navDrawer').classList.contains('open')) closeDrawer();
+});
+
+// =====================================================================
+// REVEAL ON SCROLL — IntersectionObserver, supports:
+//   .reveal           → fade + slide-up
+//   .reveal-stagger   → children stagger automatically
+//   .reveal-scale     → fade + subtle scale-in
+//   data-counter      → animated number count-up when visible
+// =====================================================================
+(function(){
+  // Reveal observer (single, all classes)
+  const revealIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        revealIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal, .reveal-stagger, .reveal-scale').forEach(el => revealIO.observe(el));
+
+  // Stat counter — counts up from 0 to target when scrolled into view
+  function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+  function animateNumber(el) {
+    const target = parseFloat(el.dataset.counter);
+    const decimals = parseInt(el.dataset.counterDecimals || '0', 10);
+    const duration = parseInt(el.dataset.counterDuration || '1400', 10);
+    const prefix = el.dataset.counterPrefix || '';
+    const suffix = el.dataset.counterSuffix || '';
+    const startTs = performance.now();
+    function frame(ts) {
+      const progress = Math.min((ts - startTs) / duration, 1);
+      const eased = easeOutQuart(progress);
+      const current = target * eased;
+      el.textContent = prefix + current.toFixed(decimals) + suffix;
+      if (progress < 1) requestAnimationFrame(frame);
+      else { el.textContent = prefix + target.toFixed(decimals) + suffix; el.classList.add('in'); }
     }
+    requestAnimationFrame(frame);
+  }
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateNumber(e.target);
+        counterIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('[data-counter]').forEach(el => {
+    el.classList.add('stat-counter');
+    el.textContent = (el.dataset.counterPrefix || '') + '0' + (el.dataset.counterSuffix || '');
+    counterIO.observe(el);
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
 
 // Audit form (demo behavior)
 function runAudit(e) {
@@ -3680,6 +4391,54 @@ document.getElementById('contactModal').addEventListener('click', function(e){
   // Netlify Forms still gets the submission for record-keeping (fire-and-forget backup).
   var AUDIT_SERVICE_URL = 'https://aeobox-audit.onrender.com';
 
+  // === Smart placeholder · URL blur triggers Haiku to adapt query/competitor hints
+  var urlInput = document.getElementById('auditUrl');
+  var placeholderInputs = {
+    queries: [document.getElementById('auditQ1'), document.getElementById('auditQ2'), document.getElementById('auditQ3')],
+    competitors: [document.getElementById('auditC1'), document.getElementById('auditC2'), document.getElementById('auditC3')]
+  };
+  var placeholderCache = {};
+  var placeholderInflight = null;
+
+  function fetchSmartPlaceholders(domain) {
+    if (!domain || domain.length < 4 || !domain.includes('.')) return;
+    if (placeholderCache[domain]) {
+      applyPlaceholders(placeholderCache[domain]);
+      return;
+    }
+    if (placeholderInflight === domain) return;
+    placeholderInflight = domain;
+    fetch(AUDIT_SERVICE_URL + '/smart-placeholder', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ domain: domain })
+    })
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(data) {
+        placeholderInflight = null;
+        if (!data || !data.queries) return;
+        placeholderCache[domain] = data;
+        applyPlaceholders(data);
+      })
+      .catch(function() { placeholderInflight = null; });
+  }
+
+  function applyPlaceholders(data) {
+    (data.queries || []).slice(0, 3).forEach(function(q, i) {
+      if (placeholderInputs.queries[i] && q) placeholderInputs.queries[i].placeholder = q;
+    });
+    (data.competitors || []).slice(0, 3).forEach(function(c, i) {
+      if (placeholderInputs.competitors[i] && c) placeholderInputs.competitors[i].placeholder = c;
+    });
+  }
+
+  if (urlInput) {
+    urlInput.addEventListener('blur', function() {
+      fetchSmartPlaceholders(cleanDomain(urlInput.value));
+    });
+  }
+
+  // === Submit handler (now packs all v1.1 optional fields)
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
     errorBox.style.display = 'none';
@@ -3691,6 +4450,17 @@ document.getElementById('contactModal').addEventListener('click', function(e){
     var domain = cleanDomain(data.get('domain'));
     var email = (data.get('email') || '').trim();
     var personName = (data.get('name') || '').trim();
+
+    // v1.1 new optional fields
+    var market = (data.get('target_market') || '').trim();
+    var role = (data.get('role') || '').trim();
+    var linkedin = (data.get('linkedin') || '').trim();
+    var userQueries = ['query_1', 'query_2', 'query_3']
+      .map(function(k) { return (data.get(k) || '').trim(); })
+      .filter(function(q) { return q.length > 0; });
+    var userCompetitors = ['competitor_1', 'competitor_2', 'competitor_3']
+      .map(function(k) { return (data.get(k) || '').trim(); })
+      .filter(function(c) { return c.length > 0; });
 
     // Fire-and-forget backup: post to Netlify Forms so Sophie has a record
     try {
@@ -3712,11 +4482,17 @@ document.getElementById('contactModal').addEventListener('click', function(e){
         body: JSON.stringify({
           domain: domain,
           email: email,
-          name: '',
+          name: personName,
           company: '',
           source: 'audit',
           goals: [],
-          context: ''
+          context: '',
+          // v1.1 user_brief
+          target_market: market,
+          role: role,
+          linkedin: linkedin,
+          user_queries: userQueries,
+          user_competitors: userCompetitors
         })
       });
 
